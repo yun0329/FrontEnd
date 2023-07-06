@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/logo.png" />
+    <script src="main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ba49d39b5e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>소확행</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <img src="/img/logo.png" alt="로고" />
+        <a href="#" class="service_name">소확행</a>
+      </div>
+      <div class="search-mode">
+        <div class="search_icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <input type="text" class="inputbox" placeholder="가게를 검색해보세요" />
+      </div>
+      <ul class="navbar_menu">
+        <p class="icon_name">
+          <span>소</span>상공인·<span>소</span>비자에게 <span>확</span>실한
+          <span>행</span>복
+        </p>
+      </ul>
+      <ul class="navbar_icon">
+        <li>
+          <p><i class="fa-regular fa-user"></i></p>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="infoChange_header">
+      <i class="fa-regular fa-pen-to-square"></i>가게정보를 수정해주세요.
+    </div>
+    <div class="infoChange_container">
+      <p>1. 가게 사진</p>
+      <div class="store_img">
+        <img src="/img/가게사진1.png" alt="가게사진1" />
+        <img src="/img/가게사진2.png" alt="가게사진2" />
+        <img src="/img/가게사진3.png" alt="가게사진3" />
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" name="upload" />
+        <label>사진업로드(jpeg, png)</label>
+      </div>
+
+      <p>2. 가게 소개글</p>
+      <input
+        type="text"
+        placeholder="손님들이 가게 정보를 알 수 있도록 가게를 소개해주세요.*"
+        style="height: 100px"
+      />
+      <p>3. 가게 위치</p>
+      <div class="address">
+        <form class="address" action="" name="frm">
+          <input
+            type="button"
+            value="주소입력"
+            onclick="openAddressPopup()"
+            id="address_input"
+          />
+          <input type="text" id="address_input2" name="address" readonly />
+        </form>
+      </div>
+
+      <p>4. 가게 메뉴</p>
+      <div class="menu">
+        <div>
+          <p>⦁ 사진으로 등록하기</p>
+          <div class="menu_img">
+            <img src="/img/메뉴사진1.png" alt="메뉴사진1" />
+            <img src="/img/메뉴사진2.png" alt="메뉴사진2" />
+            <img src="/img/메뉴사진3.png" alt="메뉴사진3" />
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" name="upload" />
+            <label>사진업로드(jpeg, png)</label>
+          </div>
+        </div>
+        <p>⦁ 글로 등록하기</p>
+        <input
+          type="text"
+          placeholder="메뉴, 가격 등을 상세히 기술해주세요.*"
+          style="height: 100px; width: 98%"
+        />
+      </div>
+
+      <p>5. 가게 운영시간</p>
+      <div class="select">
+        <select id="day-select">
+          <option value="" disabled selected>요일</option>
+          <option value="월요일">월요일</option>
+          <option value="화요일">화요일</option>
+          <option value="수요일">수요일</option>
+          <option value="목요일">목요일</option>
+          <option value="금요일">금요일</option>
+          <option value="토요일">토요일</option>
+          <option value="일요일">일요일</option>
+        </select>
+
+        <select id="open-time-select">
+          <option value="" disabled selected>오픈시간 시/분</option>
+          <option value="07:00">07:00</option>
+          <option value="08:00">08:00</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+        </select>
+        <p>~</p>
+        <select id="closing-time-select">
+          <option value="" disabled selected>마감시간 시/분</option>
+          <option value="18:00">18:00</option>
+          <option value="19:00">19:00</option>
+          <option value="20:00">20:00</option>
+          <option value="21:00">21:00</option>
+          <option value="22:00">22:00</option>
+          <option value="23:00">23:00</option>
+          <option value="24:00">24:00</option>
+        </select>
+      </div>
+
+      <p>6. 소비자 등록번호</p>
+      <input
+        type="text"
+        placeholder="소비자 등록번호 입력 *"
+        style="height: 30px"
+      />
+
+      <div class="change">
+        <input type="button" value="수정하기" id="change_button" />
+      </div>
+    </div>
+  </body>
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script>
+    function openAddressPopup() {
+      new daum.Postcode({
+        oncomplete: function (data) {
+          // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+          // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
+          // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+          var roadAddr = data.roadAddress; // 도로명 주소 변수
+          var extraRoadAddr = ""; // 참고 항목 변수
+
+          // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+          // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+          if (data.bname !== "" && /[동|로|가]$/g.test(data.bname)) {
+            extraRoadAddr += data.bname;
+          }
+          // 건물명이 있고, 공동주택일 경우 추가한다.
+          if (data.buildingName !== "" && data.apartment === "Y") {
+            extraRoadAddr +=
+              extraRoadAddr !== ""
+                ? ", " + data.buildingName
+                : data.buildingName;
+          }
+          // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+          if (extraRoadAddr !== "") {
+            extraRoadAddr = " (" + extraRoadAddr + ")";
+          }
+
+          document.getElementsByName("address")[0].value =
+            roadAddr + extraRoadAddr;
+        },
+      }).open();
+    }
+  </script>
+</html>
