@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+}
+
+body {
+    background-color: #E7E7E7;
+}
+
+h4 {
+    margin-bottom: 2%;
+}
+
+/* 전체 컨텐츠 박스 */
+.box {
+    width: 65%;
+    height: 50%;
+    margin: 2% 18% 2% 18%;
+    background-color: #ffffff;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: #6C6A6A;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+
+/* 소비자 회원가입 제목 컨테이너 */
+.consumSignup-main {
+    margin: 7% 0 2% 13%;
+    display: flex;
+    justify-content:flex-start;
+}
+
+.consumSignup-main img {
+    width: 8%;
+    height: 8%;
+    margin-right: 2%;
+}
+
+.consumSignup-main pre {
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 2% 0 0 0;
+}
+
+
+/* 정보 입력 form 컨테이너 */
+.consumSignup-container {
+    margin: 0 15% 5% 15%;
+}
+
+.input-info {
+    width: 600px; 
+    height: 50px;
+    border-radius: 10px;
+    border-width: 1px;
+    padding-left: 10px;
+}
+
+
+/* 로그인 컨테이너 */
+.login-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 19% 2% 0;
+}
+
+.login-container pre {
+    display: inline;
+    margin-left: 5px;
+}
+
+.login-container a {
+    display: inline;
+    margin-left: 5px;
+    text-decoration: none;
+    color: #4965C7;
+}
+
+.login-container a:visited {
+    text-decoration: none;
+    color: #4965C7;
+}
+
+
+
+/* 입력 오류 메시지 */
+.error {
+    color:red; 
+    font-size:small;
+    margin-top: 1%;
+}
+
+
+/* 회원가입 버튼 */
+.signup-btn {
+    width: 615px; 
+    height: 55px;
+    background-color: #4965C7;
+    color: #ffffff;
+    margin: 5% 0 5% 0;
+    font-size: larger;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: #6b84dd;
+}
+
+
+
+/* 반응형 */
+@media screen and (max-width: 800px) {
+    .box {
+        width: 90%;
+        margin: 10% auto;
+    }
+
+    .consumSignup-main {
+        margin: 5% 0 0 5%;
+    }
+
+    .consumSignup-main img {
+        width: 12%;
+        height: 12%;
+    }
+
+    .consumSignup-main pre {
+        font-size: large;
+        margin: 2% 0 0 0;
+    }
+
+    .consumSignup-container {
+        margin: 0 5% 5% 5%;
+    }
+
+    .input-info {
+        width: calc(90% - 10px); 
+        margin: 2% 5px;
+    }
+
+    .login-container {
+        margin-right: 5%;
+    }
+
+    .login-container pre,
+    .login-container a {
+        margin-left: 5px;
+        font-size: small;
+    }
+
+    .signup-btn {
+        width: 90%;
+        margin: 5% auto;
+    }
+}
