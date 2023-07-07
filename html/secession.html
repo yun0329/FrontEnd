@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/secession.css">
+    <link rel="icon" href="/img/logo.png">
+    <script src="/javascript/main.js"></script>
+    <script src="https://kit.fontawesome.com/ba49d39b5e.js" crossorigin="anonymous"></script>
+    <title>소확행</title>
+</head>
+<body>
+    <!--상단 네비게이션 바-->
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <img src="/img/logo.png" alt="로고">
+            <a href="/html/index.html" class="service_name">소확행</a>
+        </div>
+        <ul class="navbar_menu">
+            <p class="secession_icon_name"><span>소</span>상공인·<span>소</span>비자에게 <span>확</span>실한 <span>행</span>복</p>
+        </ul>
+        <ul class="navbar_icon">
+            <li><p><i class="fa-regular fa-user" onclick="toggleUserPanel()"></i></p></li>
+        </ul>
+    </nav>
+
+    <!-- 사용자 패널 -->
+    <div id="userPanel" class="user_panel">
+        <div class="panel_content">
+            <ul>
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">마이페이지</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--소상 공인 탈퇴 페이지 내용-->
+    <div class="secession_content_div" id="secession_title">
+        <h1 style="margin-top: 30px;">소상공인 자동 탈퇴</h1>
+        <p style="font-size: 20px;">축하합니다</p>
+        <p>방문 리뷰가 100개 이상 작성되어 자동으로 탈퇴되었습니다.</p>
+    </div>
+    <div class="secession_content_div">
+        <img src="/img/secession_img.png" alt="탈퇴 이미지">
+        <p style="margin-top: 20px;">그동안 소확행을 이용해주셔서 감사합니다.</p>
+        <p>소확행을 통해 많은 손님들이 찾아주심에 따라 자동으로 탈퇴되었습니다.</p>
+        <p>귀하 가게 앞 날을 응원하겠습니다!</p>
+        <button type="button" class="button">확인</button>
+    </div>
+   
+</body>
+</html>
