@@ -7,6 +7,27 @@ function toggleUserPanel() {
   }
 }
 
+function toggleCouponPanel(panelId) {
+  var couponPanel = document.getElementById(panelId);
+  if (couponPanel.style.display === "none") {
+    couponPanel.style.display = "block";
+  } else {
+    couponPanel.style.display = "none";
+  }
+}
+
+function editCoupon() {
+  // Add your code here to handle the edit functionality
+}
+
+function deleteCoupon() {
+  // Add your code here to handle the delete functionality
+}
+
+function checkUsageHistory() {
+  // Add your code here to handle checking the usage history
+}
+
 document
   .getElementById("input_image")
   .addEventListener("change", function (event) {
