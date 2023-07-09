@@ -36,7 +36,7 @@ h4 {
 
 /* 소비자 회원가입 제목 컨테이너 */
 .consumSignup-main {
-    margin: 7% 0 2% 13%;
+    margin: 7% 0 2% 15%;
     display: flex;
     justify-content:flex-start;
 }
