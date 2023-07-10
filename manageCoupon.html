@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/logo.png" />
+    <script src="js/coupon.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ba49d39b5e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>기프티콘/쿠폰 관리 페이지</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <img src="/img/logo.png" alt="로고" />
+        <a href="#" class="service_name">소확행</a>
+      </div>
+      <ul class="navbar_menu">
+        <p class="icon_name">
+          <span>소</span>상공인·<span>소</span>비자에게 <span>확</span>실한
+          <span>행</span>복
+        </p>
+      </ul>
+      <ul class="navbar_icon">
+        <li>
+          <p><i class="fa-regular fa-user" onclick="toggleUserPanel()"></i></p>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 사용자 패널 -->
+    <div id="userPanel" class="user_panel">
+      <div class="panel_content">
+        <ul>
+          <li><a href="#">로그아웃</a></li>
+          <li><a href="#">마이페이지</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="manageCoupon_header1">
+      <i class="fa-solid fa-receipt"></i>쿠폰
+    </div>
+    <div class="manageCoupon_header2">
+      <div class="manageCoupon_header2_left">
+        <p>전체 0</p>
+        <p>대기 0</p>
+        <p>진행중 0</p>
+        <p>종료 0</p>
+      </div>
+      <div class="manageCoupon_header2_right">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+    <hr style="margin-left: 40px; margin-right: 40px" />
+    <div class="wrap_manageCoupon_container">
+      <div class="manageCoupon_container1">
+        <p>쿠폰 검색</p>
+      </div>
+      <div class="manageCoupon_container2">
+        <p>쿠폰명/사용 혜택</p>
+        <p>상태</p>
+        <p>사용/발행</p>
+        <p>사용기간</p>
+        <p>등록일</p>
+      </div>
+      <div class="wrap_manageCoupon_container3">
+        <div class="manageCoupon_container3">
+          <button
+            id="couponPanel_button1"
+            onclick="toggleCouponPanel('couponPanel1')"
+          >
+            ⦁⦁⦁
+          </button>
+          <div id="couponPanel1" class="coupon_panel">
+            <div class="couponPanel_content">
+              <ul>
+                <li><a href="#" onclick="editCoupon()">수정</a></li>
+                <li><a href="#" onclick="deleteCoupon()">삭제</a></li>
+                <li>
+                  <a href="#" onclick="checkUsageHistory()">이용내역 확인</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <input type="text" placeholder="내용" />
+        </div>
+        <div class="manageCoupon_container3">
+          <button
+            id="couponPanel_button2"
+            onclick="toggleCouponPanel('couponPanel2')"
+          >
+            ⦁⦁⦁
+          </button>
+          <div id="couponPanel2" class="coupon_panel">
+            <div class="couponPanel_content">
+              <ul>
+                <li><a href="#" onclick="editCoupon()">수정</a></li>
+                <li><a href="#" onclick="deleteCoupon()">삭제</a></li>
+                <li>
+                  <a href="#" onclick="checkUsageHistory()">이용내역 확인</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <input type="text" placeholder="내용" />
+        </div>
+        <div class="manageCoupon_container3">
+          <button
+            id="couponPanel_button3"
+            onclick="toggleCouponPanel('couponPanel3')"
+          >
+            ⦁⦁⦁
+          </button>
+          <div id="couponPanel3" class="coupon_panel">
+            <div class="couponPanel_content">
+              <ul>
+                <li><a href="#" onclick="editCoupon()">수정</a></li>
+                <li><a href="#" onclick="deleteCoupon()">삭제</a></li>
+                <li>
+                  <a href="#" onclick="checkUsageHistory()">이용내역 확인</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <input type="text" placeholder="내용" />
+        </div>
+        <div class="manageCoupon_container3">
+          <button
+            id="couponPanel_button4"
+            onclick="toggleCouponPanel('couponPanel4')"
+          >
+            ⦁⦁⦁
+          </button>
+          <div id="couponPanel4" class="coupon_panel">
+            <div class="couponPanel_content">
+              <ul>
+                <li><a href="#" onclick="editCoupon()">수정</a></li>
+                <li><a href="#" onclick="deleteCoupon()">삭제</a></li>
+                <li>
+                  <a href="#" onclick="checkUsageHistory()">이용내역 확인</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <input type="text" placeholder="내용" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

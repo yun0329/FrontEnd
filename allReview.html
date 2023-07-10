@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/logo.png" />
+    <script src="js/coupon.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ba49d39b5e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>가게리뷰 모아보기 페이지</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <img src="img/logo.png" alt="로고" />
+        <a href="#" class="service_name">소확행</a>
+      </div>
+      <div class="search-mode">
+        <div class="search_icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <input type="text" class="inputbox" placeholder="가게를 검색해보세요" />
+      </div>
+      <ul class="navbar_menu">
+        <p class="icon_name">
+          <span>소</span>상공인·<span>소</span>비자에게 <span>확</span>실한
+          <span>행</span>복
+        </p>
+      </ul>
+      <ul class="navbar_icon">
+        <li>
+          <p><i class="fa-regular fa-user" onclick="toggleUserPanel()"></i></p>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 사용자 패널 -->
+    <div id="userPanel" class="user_panel">
+      <div class="panel_content">
+        <ul>
+          <li><a href="#">로그아웃</a></li>
+          <li><a href="#">마이페이지</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="allReview_header">
+      <div class="allReview_header1">
+        <i class="fa-solid fa-magnifying-glass"></i>방문자 리뷰 (4.78)
+      </div>
+      <div class="allReview_header2">
+        <p>리뷰 수(78/100)</p>
+      </div>
+    </div>
+
+    <hr style="border: solid 2px black" />
+
+    <div class="wrap_allReview_container">
+      <div class="allReview_container">
+        <p class="review1">78</p>
+        <div class="vertical_review">
+          <p class="review2">☆☆☆☆☆ 닉네임</p>
+          <p class="review3">날짜: 2023/12/11</p>
+        </div>
+        <input
+          type="text"
+          class="review4"
+          placeholder="리뷰 내용"
+          style="border: #000000 solid 1px"
+        />
+        <img src="img/리뷰사진1.png" alt="리뷰사진1" class="review5" />
+      </div>
+
+      <div class="allReview_container">
+        <p class="review1">79</p>
+        <div class="vertical_review">
+          <p class="review2">☆☆☆☆☆ 닉네임</p>
+          <p class="review3">날짜: 2023/11/11</p>
+        </div>
+        <input
+          type="text"
+          class="review4"
+          placeholder="리뷰 내용"
+          style="border: #000000 solid 1px"
+        />
+        <img src="./img/리뷰사진2.png" alt="리뷰사진2" class="review5" />
+      </div>
+
+      <div class="allReview_container">
+        <p class="review1">80</p>
+        <div class="vertical_review">
+          <p class="review2">☆☆☆☆☆ 닉네임</p>
+          <p class="review3">날짜: 2023/10/11</p>
+        </div>
+        <input
+          type="text"
+          class="review4"
+          placeholder="리뷰 내용"
+          style="border: #000000 solid 1px"
+        />
+        <img src="img/리뷰사진3.png" alt="리뷰사진3" class="review5" />
+      </div>
+    </div>
+
+    <div class="toolbox">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+    </div>
+  </body>
+</html>

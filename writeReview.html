@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/logo.png" />
+    <script
+      src="https://kit.fontawesome.com/ba49d39b5e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>리뷰 작성페이지</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <img src="img/logo.png" alt="로고" />
+        <a href="#" class="service_name">소확행</a>
+      </div>
+      <div class="search-mode">
+        <div class="search_icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <input type="text" class="inputbox" placeholder="가게를 검색해보세요" />
+      </div>
+      <ul class="navbar_menu">
+        <p class="icon_name">
+          <span>소</span>상공인·<span>소</span>비자에게 <span>확</span>실한
+          <span>행</span>복
+        </p>
+      </ul>
+      <ul class="navbar_icon">
+        <li>
+          <p><i class="fa-regular fa-user" onclick="toggleUserPanel()"></i></p>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 사용자 패널 -->
+    <div id="userPanel" class="user_panel">
+      <div class="panel_content">
+        <ul>
+          <li><a href="#">로그아웃</a></li>
+          <li><a href="#">마이페이지</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="writeReview_header">
+      <i class="fa-solid fa-pencil"></i>리뷰작성
+    </div>
+    <hr />
+    <div class="writeReview_container">
+      <p class="writeReview_container1">방문일</p>
+      <input type="text" style="width: 71px; border: #000000 solid 1px" />
+    </div>
+    <hr />
+    <div class="writeReview_container">
+      <p class="writeReview_container2">별점</p>
+      <input type="text" style="width: 71px; border: #000000 solid 1px" />
+      <p class="writeReview_container3">☆☆☆☆☆</p>
+    </div>
+    <hr />
+    <div class="writeReview_container">
+      <p class="writeReview_container2">후기</p>
+      <input
+        type="text"
+        style="width: 996px; height: 161px; border: #000000 solid 1px"
+      />
+    </div>
+    <hr />
+    <div class="writeReview_container">
+      <p class="writeReview_container1">인증샷</p>
+      <input
+        type="file"
+        accept="image/*"
+        id="input_image"
+        style="display: none"
+      />
+      <label for="input_image" class="attach_button">파일첨부</label>
+      <img id="image_preview" alt="이미지 미리보기" />
+    </div>
+    <hr />
+    <div class="complete">
+      <input type="button" value="완료" id="complete_button" />
+    </div>
+  </body>
+  <script src="js/coupon.js"></script>
+</html>

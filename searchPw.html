@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 찾기</title>
+    <link rel="stylesheet" href="css/search-pw.css" />
+</head>
+
+<body>
+    <section class="box">
+        <img class="logo" src="img/logo1.png" />
+        <div class="search-main">
+            <img 
+                src="img/search.png"
+                class="search-img"
+            >
+            <h1 style="margin: 0 0 0 3%;">비밀번호 찾기</h1>
+        </div>
+
+        <form class="consumSignup-container">
+            <h4>아이디</h4>
+            <input
+                class="input-id"
+                type="text"
+                name="id"
+                placeholder="아이디 입력*"
+            />
+            <br />
+            <div 
+                style="color:red; font-size:small"> 
+                입력하신 아이디 정보가 존재하지않습니다.
+            </div>
+            
+            <h4>이메일</h4>
+            <input
+                class="email"
+                type="text"
+                name="email"
+                placeholder="이메일 입력*"
+                />
+                <br />
+
+            <div 
+                style="color:red; font-size:small"> 
+                입력하신 이메일 정보가 존재하지않습니다.
+            </div>
+
+            <button type='button' class="search-btn" href="#">인증 메일 발송</button>
+        </form>
+
+    </section>
+
+
+    <!-- <script src="../js/login.js" defer></script> -->
+    </body>
+</html>
