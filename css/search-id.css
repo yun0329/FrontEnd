@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+}
+
+body {
+    background-color: #E7E7E7;
+}
+
+h4 {
+    margin-bottom: 2%;
+}
+
+.box {
+    width: 65%;
+    height: 50%;
+    margin: 2% 18% 2% 18%;
+    background-color: #ffffff;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: #6C6A6A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 12%;
+    height: 12%;
+    margin: 4% 0 1% 0;
+}
+
+/* 찾기 문구 */
+.search-main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.search-img {
+    width: 20%;
+    height: 20%;
+}
+
+.search-btn {
+    width: 558px; 
+    height: 55px;
+    background-color: #4965C7;
+    color: #ffffff;
+    margin: 15% 0 10% 0;
+    font-size: larger;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #6b84dd;
+}
+
+.input-id {
+    width: 544px; 
+    height: 50px;
+    border-radius: 10px;
+    border-width: 1px;
+    padding-left: 10px;
+}
+
+.email {
+    margin-bottom: 2%;
+    border-radius: 10px;
+    width: 544px;
+    height: 50px;
+    border-width: 1px;
+    padding-left: 10px;
+}
+
+#remember-check {
+    margin-bottom: 2%;
+}
+
+.form-end {
+    margin-bottom: 6%;
+}
+
+.form-link {
+    color: #6C6A6A;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .box {
+      width: 80%;
+      margin: 10% auto;
+    }
+  
+    .logo {
+      width: 30%;
+      height: 30%;
+    }
+  
+    .search-btn,
+    .input-id,
+    .email {
+      width: 100%;
+    }
+  }
