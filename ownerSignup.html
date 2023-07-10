@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>소상공인 회원가입</title>
     <link rel="stylesheet" href="css/owner-signup.css" />
+    <link rel="icon" href="img/logo.png" />
 </head>
 
 <body>
@@ -73,9 +74,8 @@
                 <h4>사업장 주소</h4>
 
                 <input type="button" id="search-add" onclick="execDaumPostcode()" value="주소 찾기">
-                <input type="text" id="zip-code" placeholder="우편번호">
+                <input type="text" id="address-1" placeholder="도로명주소">
 
-                <input type="text" id="address-1" class="input-info" placeholder="도로명주소">
                 <input type="text" id="address-2" class="input-info" placeholder="상세주소">
             </div>
 
@@ -116,7 +116,6 @@
       function execDaumPostcode() {
         new daum.Postcode( {
           oncomplete: function( data ) {
-            document.getElementById( 'zip-code' ).value = data.zonecode;
             document.getElementById( 'address-1' ).value = data.address;
           }
         } ).open();

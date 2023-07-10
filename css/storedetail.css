@@ -13,6 +13,7 @@
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
 
+
 :root{
     --text-color: black;
     --background-color: white;
@@ -127,13 +128,27 @@ a{
 }
 
 /* 가게 상세 페이지 관련 css */
+.store_box {
+    display: flex;
+    flex-direction: column;
+} 
+
+.store_detail_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.store_detail_leftbox {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+}
 
 .store_detail_rightbox {
-    position: absolute;
     top: 0;
     right: 0;
-    margin-top: 118px;
-    margin-right: 200px;
+    margin-right: 10%;
 }
 
 .store_name{
@@ -141,7 +156,7 @@ a{
     background-color: #4965C7;
     border: 2px solid #4965C7;
     padding: 1px;
-    margin-left: 10px;
+    margin-left: 7%;
     margin-top: 10px;
     line-height: 10px;
     border-radius: 0.5rem;
@@ -158,7 +173,6 @@ a{
     background-color: #DEE9FF;
     border: 2px solid #DEE9FF;
     padding: 1px;
-    margin-left: 10px;
     margin-top: 10px;
     line-height: 10px;
     border-radius: 0.5rem;
@@ -175,6 +189,14 @@ a{
     border-radius: 0.5rem;
 }
 
+.storeMenu_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: fit-content;
+    margin-left: 3%;
+}
+
 .store_menu{
     width: 240px;
     height: 200px;
@@ -184,7 +206,6 @@ a{
     margin-top: 10px;
     line-height: 10px;
     border-radius: 0.5rem;
-    position: absolute;
     text-align: center;
     top: 10px;
     right: 10px;
@@ -196,11 +217,10 @@ a{
     font-size: 15px;
 }
 
+
 .btn_moremenu{
-    position: absolute;
     bottom: 10px;
     left: 50%;
-    transform: translateX(-50%);
     background-color: #4965C7;
     color: #fff;
     border: none;
@@ -209,7 +229,6 @@ a{
     min-height: 30px;
     min-width: 240px;
     text-align: center;
-    margin-left: 105px;
 }
 
 .store_location{
@@ -217,7 +236,6 @@ a{
     background-color: #DEE9FF;
     border: 2px solid #DEE9FF;
     padding: 1px;
-    margin-left: 10px;
     margin-top: 10px;
     line-height: 10px;
     border-radius: 0.5rem;
@@ -234,7 +252,6 @@ a{
     background-color: #DEE9FF;
     border: 2px solid #DEE9FF;
     padding: 1px;
-    margin-left: 10px;
     margin-top: 10px;
     line-height: 10px;
     border-radius: 0.5rem;
@@ -251,7 +268,6 @@ a{
     background-color: #DEE9FF;
     border: 2px solid #DEE9FF;
     padding: 1px;
-    margin-left: 10px;
     margin-top: 10px;
     line-height: 10px;
     border-radius: 0.5rem;
@@ -269,7 +285,6 @@ a{
     background-color: #DEE9FF;
     border: 2px solid #DEE9FF;
     padding: 10px;
-    margin-left: 10px;
     margin-top: 10px;
     line-height: 10px;
     border-radius: 0.5rem;
@@ -284,6 +299,8 @@ a{
 /* 오른쪽 가게상세 박스 */
 
 .store_reviewbox{
+    display: flex;
+    flex-direction: column;
     width: 350px;
     height: 550px;
     background-color: #DEE9FF;
@@ -360,34 +377,34 @@ input{
 }
  
 /* 리뷰 창 버튼 */
+.btn_box {
+    height: 30%;
+    margin: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 
 .btn_morereview{
-    position: absolute;
     bottom: 20%;
     left: 50%;
-    transform: translateX(-50%);
     background-color: #4965C7;
     color: #fff;
     border: none;
     border-radius: 10px;
     padding: 15px;
-    min-height: 30px;
-    min-width: 240px;
     text-align: center;
 }
 
 .btn_password{
-    position: absolute;
     bottom: 10%;
     left: 50%;
-    transform: translateX(-50%);
     background-color: #4965C7;
     color: #fff;
     border: none;
     border-radius: 10px;
     padding: 15px;
-    min-height: 30px;
-    min-width: 240px;
+    
     text-align: center;
 }
 

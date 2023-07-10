@@ -38,64 +38,86 @@
   
 
   
-
+/* 프리뷰 사진 표 */
   li {
     list-style: none;
   }
 
   ul img {
-    width: 300px;
+    width: 230px;
     height: 200px;
     border-radius: 20px;
+    margin-top: 4%;
   }
 
+
+/* 가게 사진 업로드 */
   .store-real-upload {
     display: none;
   }
 
   .store-upload {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .store-upload input, label {
-    width: fit-content;
-    height: fit-content;
+    width: 17%;
+    height: 30px;
+    background-color: #E7E7E7;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left: 5%;
     cursor: pointer;
   }
 
-  .storeImg-preview {
+  /* .preview-box {
+    position: relative;
     width: 100%;
     height: 220px;
-    background-image: url('../img/img-ex.png');
-    background-repeat:no-repeat;
-    background-size: 95% 220px;
+    background-color: #4965C7;
+  } */
+
+  .storeImg-preview {
+    /* position: absolute; */
+    width: 100%;
+    height: 220px;
+    /* background-image: url('../img/img-ex.png'); */
+    /* background-repeat:no-repeat;
+    background-size: 95% 220px; */
+    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     }
 
 
-  
+  .input-info { 
+    height: 30px;
+    border-radius: 10px;
+    border-width: 1px;
+    padding-left: 10px;
+  }
 
-  .address {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  #address_input {
-    background-color: #639ef6;
-    color: white;
-    width: 100px;
+  #search-add {
+    width: 90px;
+    height: 55px;
+    background-color: #4965C7;
+    color: #ffffff;
+    border-radius: 10px;
+    border: none;
     cursor: pointer;
+    margin: 0;
+    margin-bottom: 0.5%;
   }
   
-  #address_input2 {
-    display: flex;
-    width: 100%;
+  
+  #address-1 {
+      height: 30px;
+      width: 100%;
+      border-radius: 10px;
+      border-width: 1px;
+      padding-left: 10px;
+      margin-bottom: 0.5%;
   }
+  
   
 
   .menu-real-upload {
@@ -103,22 +125,24 @@
   }
 
   .menu-upload {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .menu-upload input, label {
-    width: fit-content;
-    height: fit-content;
+    width: 17%;
+    height: 30px;
+    background-color: #E7E7E7;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left: 5%;
     cursor: pointer;
   }
 
   .menuImg-preview {
     width: 100%;
     height: 220px;
-    background-image: url('../img/img-ex.png');
+    /* background-image: url('../img/img-ex.png');
     background-repeat:no-repeat;
-    background-size: 95% 220px;
+    background-size: 95% 220px; */
+    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
