@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="/img/logo.png">
+    <script src="/javascript/main.js"></script>
+    <script src="https://kit.fontawesome.com/ba49d39b5e.js" crossorigin="anonymous"></script>
+    <title>소확행</title>
+</head>
+<body>
+    <!--상단 네비게이션 바-->
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <img src="/img/logo.png" alt="로고">
+            <a href="#" class="service_name">소확행</a>
+        </div>
+        <div class="search-mode">
+            <div class="search_icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <input type="text" class="inputbox" placeholder="가게를 검색해보세요">
+          </div>
+        <ul class="navbar_menu">
+            <p class="icon_name"><span>소</span>상공인·<span>소</span>비자에게 <span>확</span>실한 <span>행</span>복</p>
+        </ul>
+        <ul class="navbar_icon">  
+            <li><p><i class="fa-regular fa-user" onclick="toggleUserPanel()"></i></p></li>
+        </ul>
+    </nav>
+
+    <!-- 하단 카테고리 네비게이션 바 -->
+     <nav class="bottom_navbar">
+        <ul class="bottom_navbar_menu">
+            <li><a href="#">혼밥</a></li>
+            <li><a href="#">가성비</a></li>
+            <li><a href="#">가족</a></li>
+            <li><a href="#">애견</a></li>
+            <li><a href="#">뷰</a></li>
+            <li><a href="#">데이트</a></li>
+        </ul>
+    </nav>
+    <!--가게 모아보기 내용-->
+    <div class="category_name">
+        <p>"카테고리 이름"</p>
+    </div>
+    <div class="store_card">
+        <img src="/img/image1.png" alt="장소이미지">
+        <div class="store_card_content">
+            <h3>가게 이름</h3>
+            <p>가게 위치</p>
+            <a href="storedetail.html" target="_blank">장소 자세히 보기</a>
+        </div>
+    </div>
+    <div class="store_card">
+        <img src="/img/image1.png" alt="장소이미지">
+        <div class="store_card_content">
+            <h3>가게 이름</h3>
+            <p>가게 위치</p>
+            <a href="장소의 링크" target="_blank">장소 자세히 보기</a>
+        </div>
+    </div>
+    <div class="store_card">
+        <img src="/img/image1.png" alt="장소이미지">
+        <div class="store_card_content">
+            <h3>가게 이름</h3>
+            <p>가게 위치</p>
+            <a href="장소의 링크" target="_blank">장소 자세히 보기</a>
+        </div>
+    </div>
+    <div class="store_card">
+        <img src="/img/image1.png" alt="장소이미지">
+        <div class="store_card_content">
+            <h3>가게 이름</h3>
+            <p>가게 위치</p>
+            <a href="장소의 링크" target="_blank">장소 자세히 보기</a>
+        </div>
+    </div>
+   
+    
+    <!-- 사용자 패널 -->
+    <div id="userPanel" class="user_panel">
+    <div class="panel_content">
+        <ul>
+            <li><a href="#">로그아웃</a></li>
+            <li><a href="#">마이페이지</a></li>
+        </ul>
+    </div>
+    </div>
+</body>
+</html>
