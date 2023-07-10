@@ -33,10 +33,20 @@
       </ul>
       <ul class="navbar_icon">
         <li>
-          <p><i class="fa-regular fa-user"></i></p>
+          <p><i class="fa-regular fa-user" onclick="toggleUserPanel()"></i></p>
         </li>
       </ul>
     </nav>
+
+    <!-- 사용자 패널 -->
+    <div id="userPanel" class="user_panel">
+      <div class="panel_content">
+        <ul>
+          <li><a href="#">로그아웃</a></li>
+          <li><a href="#">마이페이지</a></li>
+        </ul>
+      </div>
+    </div>
 
     <div class="infoChange_header">
       <i class="fa-regular fa-pen-to-square"></i>가게정보를 수정해주세요.
