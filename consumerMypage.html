@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/consumerMypage.css">
+    <link rel="icon" href="img/logo.png">
+    <script src="js/coupon.js"></script>
+    <script src="https://kit.fontawesome.com/ba49d39b5e.js" crossorigin="anonymous"></script>
+    <title>소확행</title>
+</head>
+<body>
+    <!--상단 네비게이션 바-->
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <img src="img/logo.png" alt="로고">
+          <a href="#" class="service_name">소확행</a>
+      </div>
+      <div class="search-mode">
+          <div class="search_icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <input type="text" class="inputbox" placeholder="가게를 검색해보세요">
+        </div>
+      <ul class="navbar_menu">
+          <p class="icon_name"><span>소</span>상공인·<span>소</span>비자에게 <span>확</span>실한 <span>행</span>복</p>
+      </ul>
+      <ul class="navbar_icon">  
+          <li><p><i class="fa-regular fa-user" onclick="toggleUserPanel()"></i></p></li>
+      </ul>
+  </nav>
+
+  <!-- 하단 카테고리 네비게이션 바 -->
+   <nav class="bottom_navbar">
+      <ul class="bottom_navbar_menu">
+          <li><a href="#">혼밥</a></li>
+          <li><a href="#">가성비</a></li>
+          <li><a href="#">가족</a></li>
+          <li><a href="#">애견</a></li>
+          <li><a href="#">뷰</a></li>
+          <li><a href="#">데이트</a></li>
+      </ul>
+  </nav>
+
+    <div class="containerb">
+        <div class="image-container">
+          <img src="img/page.png" alt="page">
+          <div class="text-container">
+            <h2>마이페이지</h2>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="text"><p>나의 활동</p></div>
+      <div class="container">
+        <div class="square-box">
+          <div class="user-image-container">
+          <img src="img/user.png" alt="user" class="user-image">
+        </div>
+        <p class="username-text">아이디</p> 
+        <p class="username-text1">님</p>
+        <div class="bt">
+          <button type="button" onclick="location.href='file:///C:/Users/yunji/Desktop/%ED%94%84%EB%A1%9C%ED%95%84%20%EC%88%98%EC%A0%95%20%ED%8E%98%EC%9D%B4%EC%A7%80/index.html'">프로필 수정</button>
+          
+      </div>
+        </div>
+        <div class="vertical-box">
+          <div class="rectangular-box">
+            <a href="file:///C:/Users/yunji/Desktop/%EB%B0%A9%EB%AC%B8%ED%95%9C%20%EA%B0%80%EA%B2%8C%EB%AA%A9%EB%A1%9D%20%ED%8E%98%EC%9D%B4%EC%A7%80/index.html" class="mypage">내가 방문한 가게> <br></a>
+            <p class="text">0개</p>
+          </div>
+          <div class="rectangular-box">
+            <a href="file:///C:/Users/yunji/Desktop/%EC%86%8C%EB%B9%84%EC%9E%90%20%EB%A6%AC%EB%B7%B0%EB%AA%A9%EB%A1%9D%20%ED%8E%98%EC%9D%B4%EC%A7%80/index.html" class="mypage">내가 남긴 리뷰> <br></a>
+            <p class="text">0개</p>
+          </div>
+          <div class="rectangular-box">
+            <a href="file:///C:/Users/yunji/Desktop/%EC%86%8C%EB%B9%84%EC%9E%90%20%EC%BF%A0%ED%8F%B0%EB%AA%A9%EB%A1%9D%20%ED%8E%98%EC%9D%B4%EC%A7%80/index.html" class="mypage">나의 쿠폰> <br></a>
+            <p class="text">0개</p>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>
