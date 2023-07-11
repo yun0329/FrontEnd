@@ -1,0 +1,126 @@
+.manageCoupon_header1 {
+  display: flex;
+  padding: 20px 30px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.manageCoupon_header2 {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 50px;
+}
+
+.manageCoupon_header2_left {
+  display: flex;
+  flex-direction: row;
+}
+
+.manageCoupon_header2_left p {
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.manageCoupon_header2_right {
+  display: flex;
+  align-items: center;
+}
+
+.manageCoupon_header2_right i {
+  font-size: 40px;
+}
+
+.wrap_manageCoupon_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.manageCoupon_container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bcc9fa;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.manageCoupon_container1 p {
+  display: flex;
+  font-size: 20px;
+}
+
+.manageCoupon_container2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #dee9ff;
+  border-radius: 10px;
+  margin: 20px 30px;
+  height: 30px;
+}
+
+.wrap_manageCoupon_container3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.manageCoupon_container3 {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: relative;
+}
+
+.manageCoupon_container3 input {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 30px;
+  border: none;
+  background-color: transparent;
+}
+
+#couponPanel_button1,
+#couponPanel_button2,
+#couponPanel_button3,
+#couponPanel_button4 {
+  display: flex;
+  flex-direction: row-reverse;
+  border: none;
+  background-color: transparent;
+}
+
+.couponPanel_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.couponPanel_content ul {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0;
+  list-style: none;
+  background-color: #d9d9d9;
+  margin: 10px;
+}
+
+.couponPanel_content ul li {
+  display: inline;
+}
+
+.couponPanel_content ul li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  text-align: inherit;
+}
+
+.coupon_panel {
+  display: none;
+}

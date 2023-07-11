@@ -1,0 +1,83 @@
+.makeCoupon_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.makeCoupon_header1 {
+  display: flex;
+  padding: 20px 30px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.makeCoupon_header2 {
+  display: flex;
+  padding: 20px 30px;
+  align-items: center;
+}
+
+.makeCoupon_header2 input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100px;
+  height: 35px;
+  background-color: #4965c7;
+  color: white;
+  padding: 0;
+}
+
+.makeCoupon_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 30px;
+}
+
+.makeCoupon_container_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.makeCoupon_container_left p {
+  display: flex;
+  background-color: #95bfff;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  padding: 10px;
+}
+
+.makeCoupon_container_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.makeCoupon_container_right input {
+  display: flex;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1.2px solid #000;
+  outline: none;
+}
+
+.makeCoupon_container_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.makeCoupon_container_row p {
+  display: flex;
+  flex-direction: row;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 0;
+}
