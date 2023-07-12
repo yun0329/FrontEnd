@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/infoChange.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <link rel="icon" href="img/logo.png" />
-    <script src="js/coupon.js"></script>
     <script
       src="https://kit.fontawesome.com/ba49d39b5e.js"
       crossorigin="anonymous"
@@ -53,18 +53,51 @@
     </div>
     <div class="infoChange_container">
       <p>1. 가게 사진</p>
-      <div class="store_img">
-        <img src="img/가게사진1.png" alt="가게사진1" />
-        <img src="img/가게사진2.png" alt="가게사진2" />
-        <img src="img/가게사진3.png" alt="가게사진3" />
-      </div>
-      <div class="checkbox-container">
-        <input type="checkbox" name="upload" />
-        <label>사진업로드(jpeg, png)</label>
+      <div class="wrap_store_img">
+        <img
+          onclick="handleImgClick(this)"
+          class="store_img"
+          id="store_img_1"
+          src="./img/store_basic_img.png"
+        />
+        <input
+          onchange="readURL(this)"
+          id="input_store_img_1"
+          type="file"
+          accept="img"
+          hidden
+        />
+        <img
+          onclick="handleImgClick(this)"
+          class="store_img"
+          id="store_img_2"
+          src="./img/store_basic_img.png"
+        />
+        <input
+          onchange="readURL(this)"
+          id="input_store_img_2"
+          type="file"
+          accept="img"
+          hidden
+        />
+        <img
+          onclick="handleImgClick(this)"
+          class="store_img"
+          id="store_img_3"
+          src="./img/store_basic_img.png"
+        />
+        <input
+          onchange="readURL(this)"
+          id="input_store_img_3"
+          type="file"
+          accept="img"
+          hidden
+        />
       </div>
 
       <p>2. 가게 소개글</p>
       <input
+        id="store_introduction"
         type="text"
         placeholder="손님들이 가게 정보를 알 수 있도록 가게를 소개해주세요.*"
         style="height: 100px"
@@ -72,13 +105,25 @@
       <p>3. 가게 위치</p>
       <div class="address">
         <form class="address" action="" name="frm">
-          <input
-            type="button"
-            value="주소입력"
-            onclick="openAddressPopup()"
-            id="address_input"
-          />
-          <input type="text" id="address_input2" name="address" readonly />
+          <div class="wrap_adress_input1">
+            <input
+              type="button"
+              value="주소입력"
+              onclick="openAddressPopup()"
+              id="address_input_button"
+            />
+            <input type="text" id="postalCode" name="address" readonly />
+          </div>
+
+          <div class="wrap_adress_input2">
+            <input type="text" id="address_input1" name="address" readonly />
+            <input
+              type="text"
+              id="address_input2"
+              placeholder="상세주소 입력"
+              name="address"
+            />
+          </div>
         </form>
       </div>
 
@@ -86,21 +131,53 @@
       <div class="menu">
         <div>
           <p>⦁ 사진으로 등록하기</p>
-          <div class="menu_img">
-            <img src="img/메뉴사진1.png" alt="메뉴사진1" />
-            <img src="img/메뉴사진2.png" alt="메뉴사진2" />
-            <img src="img/메뉴사진3.png" alt="메뉴사진3" />
-          </div>
-          <div class="checkbox-container">
-            <input type="checkbox" name="upload" />
-            <label>사진업로드(jpeg, png)</label>
+          <div class="wrap_menu_img">
+            <img
+              onclick="handleImgClick2(this)"
+              class="menu_img"
+              id="menu_img_1"
+              src="./img/menu_basic_img.png"
+            />
+            <input
+              onchange="readURL2(this)"
+              id="input_menu_img_1"
+              type="file"
+              accept="img"
+              hidden
+            />
+            <img
+              onclick="handleImgClick2(this)"
+              class="menu_img"
+              id="menu_img_2"
+              src="./img/menu_basic_img.png"
+            />
+            <input
+              onchange="readURL2(this)"
+              id="input_menu_img_2"
+              type="file"
+              accept="img"
+              hidden
+            />
+            <img
+              onclick="handleImgClick2(this)"
+              class="menu_img"
+              id="menu_img_3"
+              src="./img/menu_basic_img.png"
+            />
+            <input
+              onchange="readURL2(this)"
+              id="input_menu_img_3"
+              type="file"
+              accept="img"
+              hidden
+            />
           </div>
         </div>
         <p>⦁ 글로 등록하기</p>
         <input
+          id="writing_register"
           type="text"
           placeholder="메뉴, 가격 등을 상세히 기술해주세요.*"
-          style="height: 100px; width: 98%"
         />
       </div>
 
@@ -144,6 +221,7 @@
 
       <p>6. 소비자 등록번호</p>
       <input
+        id="registration_number"
         type="text"
         placeholder="소비자 등록번호 입력 *"
         style="height: 30px"
@@ -155,38 +233,5 @@
     </div>
   </body>
   <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-  <script>
-    function openAddressPopup() {
-      new daum.Postcode({
-        oncomplete: function (data) {
-          // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-
-          // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
-          // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-          var roadAddr = data.roadAddress; // 도로명 주소 변수
-          var extraRoadAddr = ""; // 참고 항목 변수
-
-          // 법정동명이 있을 경우 추가한다. (법정리는 제외)
-          // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
-          if (data.bname !== "" && /[동|로|가]$/g.test(data.bname)) {
-            extraRoadAddr += data.bname;
-          }
-          // 건물명이 있고, 공동주택일 경우 추가한다.
-          if (data.buildingName !== "" && data.apartment === "Y") {
-            extraRoadAddr +=
-              extraRoadAddr !== ""
-                ? ", " + data.buildingName
-                : data.buildingName;
-          }
-          // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
-          if (extraRoadAddr !== "") {
-            extraRoadAddr = " (" + extraRoadAddr + ")";
-          }
-
-          document.getElementsByName("address")[0].value =
-            roadAddr + extraRoadAddr;
-        },
-      }).open();
-    }
-  </script>
+  <script src="./js/infoChange.js"></script>
 </html>

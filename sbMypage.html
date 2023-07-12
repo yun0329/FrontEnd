@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/sbMypage.css" />
     <link rel="icon" href="img/logo.png" />
     <script src="js/coupon.js"></script>
     <script
@@ -61,7 +62,19 @@
       />
     </div>
     <div class="sbMypage_header2">
-      <img src="img/마이페이지 사진.png" alt="사진" />
+      <img
+        onclick="handleImgClick3(this)"
+        class="sbMypage_mypage_img"
+        id="sbMypage_mypage_img_1"
+        src="./img/sbMypage_mypage_basic_img.png"
+      />
+      <input
+        onchange="readURL3(this)"
+        id="input_sbMypage_mypage_img_1"
+        type="file"
+        accept="img"
+        hidden
+      />
       <p>아이디: Sangmyung</p>
     </div>
     <div class="sbMypage_header3">
@@ -79,10 +92,58 @@
     <div class="sbMypage_container1">
       <p>가게사진</p>
       <div class="sbMypage_container1_img">
-        <img src="img/가게사진5.png" alt="가게사진" />
-        <img src="img/가게사진6.png" alt="가게사진" />
-        <img src="img/가게사진7.png" alt="가게사진" />
-        <img src="img/가게사진8.png" alt="가게사진" />
+        <img
+          onclick="handleImgClick4(this)"
+          class="sbMypage_store_img"
+          id="sbMypage_store_img_1"
+          src="./img/sbMypage_store_basic_img.png"
+        />
+        <input
+          onchange="readURL4(this)"
+          id="input_sbMypage_store_img_1"
+          type="file"
+          accept="img"
+          hidden
+        />
+        <img
+          onclick="handleImgClick4(this)"
+          class="sbMypage_store_img"
+          id="sbMypage_store_img_2"
+          src="./img/sbMypage_store_basic_img.png"
+        />
+        <input
+          onchange="readURL4(this)"
+          id="input_sbMypage_store_img_2"
+          type="file"
+          accept="img"
+          hidden
+        />
+        <img
+          onclick="handleImgClick4(this)"
+          class="sbMypage_store_img"
+          id="sbMypage_store_img_3"
+          src="./img/sbMypage_store_basic_img.png"
+        />
+        <input
+          onchange="readURL4(this)"
+          id="input_sbMypage_store_img_3"
+          type="file"
+          accept="img"
+          hidden
+        />
+        <img
+          onclick="handleImgClick4(this)"
+          class="sbMypage_store_img"
+          id="sbMypage_store_img_4"
+          src="./img/sbMypage_store_basic_img.png"
+        />
+        <input
+          onchange="readURL4(this)"
+          id="input_sbMypage_store_img_4"
+          type="file"
+          accept="img"
+          hidden
+        />
       </div>
     </div>
     <div class="sbMypage_container2">
@@ -93,4 +154,5 @@
   <div class="wrap_sbMypage_container_button">
     <input type="button" class="sbMypage_container_button" value="수정하기" />
   </div>
+  <script src="./js/sbMypage.js"></script>
 </html>

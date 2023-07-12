@@ -1,0 +1,137 @@
+.infoChange_header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.infoChange_container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 50px;
+  width: 70%;
+}
+
+.wrap_store_img {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.store_img {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  border: #000000 solid 1px;
+  display: hidden;
+}
+
+#store_introduction {
+  width: auto;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap_adress_input1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#address_input_button {
+  background-color: #639ef6;
+  color: white;
+  width: 100px;
+  cursor: pointer;
+}
+
+#postalCode {
+  display: flex;
+  width: 200px;
+}
+
+.wrap_adress_input2 {
+  display: flex;
+  flex-direction: column;
+}
+
+#address_input1 {
+  display: flex;
+  width: auto;
+}
+
+#address_input2 {
+  display: flex;
+  width: auto;
+}
+
+.wrap_menu_img {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_img {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  border: #000000 solid 1px;
+  display: hidden;
+}
+
+#writing_register {
+  width: -webkit-fill-available;
+  height: 100px;
+}
+
+.select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#day-select {
+  border-radius: 10px;
+  width: 130px;
+  height: 40px;
+}
+
+#open-time-select {
+  border-radius: 10px;
+  width: 130px;
+  height: 40px;
+}
+
+#closing-time-select {
+  border-radius: 10px;
+  width: 130px;
+  height: 40px;
+}
+
+select option[value=""][disabled] {
+  display: none;
+}
+
+#registration_number {
+  width: auto;
+}
+.change {
+  display: flex;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+#change_button {
+  background-color: #4965c7;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+}

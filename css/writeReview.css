@@ -1,0 +1,61 @@
+.writeReview_header {
+  display: flex;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.writeReview_container {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.writeReview_container1 {
+  display: flex;
+  padding-right: 50px;
+}
+
+.writeReview_container2 {
+  display: flex;
+  padding-right: 67px;
+}
+
+.writeReview_container3 {
+  display: flex;
+  padding-left: 20px;
+}
+
+.attach_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #639ef6;
+  width: 101px;
+  height: 36px;
+  border-radius: 10px;
+  border: #000000 solid 1px;
+}
+
+#image_preview {
+  display: flex;
+  width: 340px;
+  height: 150px;
+  margin-left: 40px;
+  border-radius: 10px;
+  border: #000000 solid 1px;
+}
+
+.complete {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+#complete_button {
+  background-color: #4965c7;
+  color: white;
+  width: 101px;
+  height: 40px;
+  cursor: pointer;
+}
