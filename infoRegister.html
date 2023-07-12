@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/info-register.css" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/logo.png" />
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script>
     <title>소확행</title>
   </head>
   <body>
@@ -48,13 +51,27 @@
     </div>
     <div class="infoRegister_container">
         <h3>1. 가게 사진</h3>
-            
-        <div class="preview-box">
-          <ul class="storeImg-preview"></ul>
+         
+        <div class = "container-fluid">
+          <div class = "store-col-md-6">
+              <ul class = "uploaded_storeImg"></ul>
+              
+              <!-- 이미지 순서 표시 -->
+              <!-- <div class = "form-group storeImg_order">                           
+                  <label>Order</label>                               
+                  <input type = "text" class = "form-control storeImg_hidden_field" value = "" disabled = "disabled" />   
+              </div>                      -->
+          </div>
+          <div class = "form-group">
+            <input type = "file" name = "upload" multiple = "multiple" id="storeImgFile" class = "form-control picked_storeImg" />                 
+            <button class="storeImgBtn">
+              <label for="storeImgFile">
+                사진업로드(jpeg, png)
+              </label>
+            </button>  
+          </div>   
         </div>
-        
-        <input type="file" class="store-real-upload" accept="image/*" required multiple>
-        <div class="store-upload">사진업로드(jpeg, png)</div>
+      
 
     </br>
 
@@ -81,10 +98,25 @@
         <div class="menu">
             <div>
               <p>⦁ 사진으로 등록하기</p>
-              <ul class="menuImg-preview"></ul>
-              <input type="file" class="menu-real-upload" accept="image/*" required multiple>
-              <div class="menu-upload">사진업로드(jpeg, png)</div>
-
+              <div class = "menu-container-fluid">
+                <div class = "menu-col-md-6">
+                    <ul class = "uploaded_menuImg"></ul>
+                    
+                    <!-- 이미지 순서 표시 -->
+                    <!-- <div class = "form-group menuImg_order">                           
+                        <label>Order</label>                               
+                        <input type = "text" class = "form-control menuImg_hidden_field" value = "" disabled = "disabled" />   
+                    </div>                      -->
+                </div>
+                <div class = "menu-form-group">
+                  <input type = "file" name = "upload" multiple = "multiple" id="menuImgFile" class = "menu-form-control picked_menuImg" />                 
+                  <button class="menuImgBtn">
+                    <label for="menuImgFile">
+                      사진업로드(jpeg, png)
+                    </label>
+                  </button>  
+                </div>   
+              </div>
             </div>
             <p>⦁ 글로 등록하기</p>
             <input
@@ -144,7 +176,7 @@
         />
 
         <div class="register">
-            <input type="button" value="등록하기" id="register_button" />
+            <input type="button" value="등록하기" id="register_btn" />
         </div>
     </div>
 
@@ -156,7 +188,6 @@
     ></script>
 
   </body>
-  <script src="../js/info-resister.js"></script>
 <script
     src="https://kit.fontawesome.com/ba49d39b5e.js"
     crossorigin="anonymous"
