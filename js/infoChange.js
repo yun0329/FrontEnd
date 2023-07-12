@@ -40,9 +40,9 @@ function readURL2(input) {
   }
 }
 
-// Attach the event listener to the checkbox
-var uploadCheckbox = document.getElementById("uploadCheckbox");
-uploadCheckbox.addEventListener("change", handleImageUpload);
+// // Attach the event listener to the checkbox
+// var uploadCheckbox = document.getElementById("uploadCheckbox");
+// uploadCheckbox.addEventListener("change", handleImageUpload);
 
 function openAddressPopup() {
   new daum.Postcode({
@@ -67,3 +67,64 @@ function openAddressPopup() {
     },
   }).open();
 }
+
+var grantType = localStorage.getItem("grantType");
+var accessToken = localStorage.getItem("accessToken");
+var refreshToken = localStorage.getItem("refreshToken");
+
+$.ajax({
+  type: "GET",
+  url: `${서버주소}/api/store`,
+  contentType: "application/json",
+  headers: {
+    Authorization: grantType + " " + accessToken,
+    Refresh: refreshToken,
+  },
+  success: function (data) {
+    $("#address_input1").val(data.store_addr);
+    $("#registration_number").val(data.reg_num);
+    $("#store_img_1").attr("src", data.store_img);
+  },
+  error: function () {
+    alert("소상공인 회원 등록자가 아닙니다.");
+  },
+});
+
+$.ajax({
+  type: "PUT",
+  url: `${서버주소}/api/store`,
+  contentType: "application/json",
+  headers: {
+    Authorization: grantType + " " + accessToken,
+    Refresh: refreshToken,
+  },
+  data: JSON.stringify({
+    store_intro: "store_intro",
+    store_img: "store_img_link",
+    certification_num: 1234,
+  }),
+  success: function (data) {
+    alert("수정 완료되었습니다.");
+    location.href = "/sbMypage.html";
+  },
+  error: function () {
+    alert("소상공인 회원 등록자가 아닙니다.");
+  },
+});
+
+$.ajax({
+  type: "DELETE",
+  url: `${서버주소}/api/store`,
+  contentType: "application/json",
+  headers: {
+    Authorization: grantType + " " + accessToken,
+    Refresh: refreshToken,
+  },
+  success: function (data) {
+    alert("수정 완료되었습니다.");
+    location.href = "/sbMypage.html";
+  },
+  error: function () {
+    alert("소상공인 회원 등록자가 아닙니다.");
+  },
+});
