@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+
+:root{
+    --text-color: black;
+    --background-color: white;
+    --icon-color: black;
+    --bodybackground-color:white;
+    --nav-length: 6;
+    --nav-width: calc(100% / var(--nav-length));
+}
+/* 상단 네이게이션 바 */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 6px 12px;
+    border-bottom: 1px solid lightgray;
+}
+
+.navbar_menu .icon_name span{
+    font-weight: bold;
+    display: inline-block;
+}
+
+body{
+    margin: 0;
+    background-color: var(--bodybackground-color);
+}
+.navbar_logo {
+    display: flex;
+    align-items: center;
+}
+.navbar_logo img{
+    width: 50px;
+    height: 50px;
+    padding-left:0;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.service_name{
+    font-size: 20px;
+    font-family: 'SeoulNamsanM', sans-serif;
+    top: 10px;
+    padding-left: 10px;
+}
+.navbar_menu{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+}
+
+.navbar_menu li{
+    padding: 8px 20px;
+}
+
+.icon_name{
+    font-family: 'SeoulNamsanM', sans-serif;
+    text-align: center;
+}
+
+.navbar_icon{
+    list-style: none;
+    display: flex;
+    color: var(--icon-color);
+    margin:0;
+    padding-left: 0;
+}
+
+.navbar_icon li p{
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.navber_icon li{
+    padding:8px 12px;
+    margin: 0;
+}
+.secession_icon_name{
+    font-family: 'SeoulNamsanM', sans-serif;
+}
+
+.navbar_menu .secession_icon_name span{
+    font-weight: bold;
+}
+
+.secession_content_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.secession_content_div h1{
+    margin: 10px 0;
+    font-family: 'Pretendard-Regular';
+}
+
+.secession_content_div p {
+    margin: 10px 0;
+    font-family: 'Pretendard-Regular';
+}
+
+.secession_content_div img{
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+}
+.button{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4965C7;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 30px;
+    min-width: 100px;
+} /* 소상공인 탈퇴 버튼 */
+ 
+
+/* 토글 창 띄우기 디자인 */
+.user_panel {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 15px;
+    width: 180px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Pretendard-Regular';
+}
+
+.panel_content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.panel_content ul li {
+    padding: 10px 15px;
+}
+
+.panel_content ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.panel_content ul li a:hover {
+    background-color: #f1f1f1;
+}

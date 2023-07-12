@@ -37,92 +37,203 @@
   }
   
 
+/* 가게 사진 업로드 css */
+
+.store-col-md-6 {
+  border: 1px solid #c1c1c1;
+  width: 100%;
+  height: 410px;
+  margin-bottom: 1%;
+  background-image: url('/img/img-ex.jpg');
+  background-repeat:no-repeat;
+  background-size: 100% 410px;
+  object-fit: cover;
+}
+
+ul.uploaded_storeImg {
+  position: relative;
+  list-style-type: none; 
+  margin: 20px 0 0 0; 
+  padding: 0;
+}
+
+ul.uploaded_storeImg li {
+  background-color: #fff; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  float: left; 
+  margin: 20px 10px 0 20px; 
+  padding: 2px; 
+  width: 200px; 
+  height: 150px; 
+  line-height: 150px; 
+  position: relative;
+}
+
+ul.uploaded_storeImg li img.img-thumb {
+  width: 200px; 
+  height: 150px;
+}
+
+ul.uploaded_storeImg .ui-selected {
+  background: red;
+}
+
+ul.uploaded_storeImg .highlight {
+  border: 1px dashed #000; 
+  width: 200px; 
+  background-color: #ccc; 
+  border-radius: 5px;
+}
+
+ul.uploaded_storeImg .delete-btn {
+  width: 24px; 
+  border: 0; 
+  position: absolute; 
+  top: -12px; 
+  right: -14px;
+}
+
+.bg-success {padding: 7px;}
+
+.form-group label {
+  cursor: pointer;
+  padding-bottom: 5px;
+  width: 17%;
+  height: 30px;
+}
+
+#storeImgFile {
+  display: none;
+}
+
+.storeImgBtn {
+  width: 17%;
+  height: 30px;
+  background-color: #E7E7E7;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10px;
+  border: 1px solid rgb(20, 20, 20);
+  margin-left: 20px;
+}
+
   
 
-  li {
-    list-style: none;
+/* 정보 입력 칸 css */
+  .input-info { 
+    height: 30px;
+    border-radius: 10px;
+    border-width: 1px;
+    padding-left: 10px;
   }
 
-  ul img {
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
-  }
 
-  .store-real-upload {
+  /* 주소 찾기 css */
+  #search-add {
+    width: 90px;
+    height: 55px;
+    background-color: #4965C7;
+    color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    margin-bottom: 0.5%;
+  }
+  
+  
+  #address-1 {
+      height: 30px;
+      width: 100%;
+      border-radius: 10px;
+      border-width: 1px;
+      padding-left: 10px;
+      margin-bottom: 0.5%;
+  }
+  
+  
+/* 메뉴 사진 업로드 css */
+  .menu-col-md-6 {
+    border: 1px solid #c1c1c1;
+    width: 100%;
+    height: 410px;
+    margin-bottom: 1%;
+    background-image: url('/img/img-ex.jpg');
+    background-repeat:no-repeat;
+    background-size: 100% 410px;
+    object-fit: cover;
+  }
+  
+  ul.uploaded_menuImg {
+    position: relative;
+    list-style-type: none; 
+    margin: 20px 0 0 0; 
+    padding: 0;
+  }
+  
+  ul.uploaded_menuImg li {
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    float: left; 
+    margin: 20px 10px 0 20px; 
+    padding: 2px; 
+    width: 200px; 
+    height: 150px; 
+    line-height: 150px; 
+    position: relative;
+  }
+  
+  ul.uploaded_menuImg li img.menuImg-thumb {
+    width: 200px; 
+    height: 150px;
+  }
+  
+  ul.uploaded_menuImg .ui-selected {
+    background: red;
+  }
+  
+  ul.uploaded_menuImg .highlight {
+    border: 1px dashed #000; 
+    width: 200px; 
+    background-color: #ccc; 
+    border-radius: 5px;
+  }
+  
+  ul.uploaded_menuImg .delete-menuBtn {
+    width: 24px; 
+    border: 0; 
+    position: absolute; 
+    top: -12px; 
+    right: -14px;
+  }
+  
+  .bg-success {padding: 7px;}
+  
+  .menu-form-group label {
+    cursor: pointer;
+    padding-bottom: 5px;
+    width: 17%;
+    height: 30px;
+  }
+  
+  #menuImgFile {
     display: none;
   }
-
-  .store-upload {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .store-upload input, label {
-    width: fit-content;
-    height: fit-content;
-    cursor: pointer;
-  }
-
-  .storeImg-preview {
-    width: 100%;
-    height: 220px;
-    background-image: url('../img/img-ex.png');
-    background-repeat:no-repeat;
-    background-size: 95% 220px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    }
-
-
   
-
-  .address {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  #address_input {
-    background-color: #639ef6;
-    color: white;
-    width: 100px;
-    cursor: pointer;
-  }
-  
-  #address_input2 {
-    display: flex;
-    width: 100%;
-  }
-  
-
-  .menu-real-upload {
-    display: none;
+  .menuImgBtn {
+    width: 17%;
+    height: 30px;
+    background-color: #E7E7E7;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(20, 20, 20);
+    margin-left: 20px;
   }
 
-  .menu-upload {
-    display: flex;
-    justify-content: flex-start;
-  }
 
-  .menu-upload input, label {
-    width: fit-content;
-    height: fit-content;
-    cursor: pointer;
-  }
-
-  .menuImg-preview {
-    width: 100%;
-    height: 220px;
-    background-image: url('../img/img-ex.png');
-    background-repeat:no-repeat;
-    background-size: 95% 220px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    }
 
   
   .select {
@@ -158,9 +269,13 @@
     margin-bottom: 12px;
   }
   
-  #register_button {
+  #register_btn {
     background-color: #4965c7;
     color: white;
     width: 100%;
     cursor: pointer;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
   }

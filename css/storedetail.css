@@ -1,0 +1,413 @@
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+
+
+:root{
+    --text-color: black;
+    --background-color: white;
+    --icon-color: black;
+    --bodybackground-color:white;
+}
+/* 상단 네이게이션 바 */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 6px 12px;
+    border-bottom: 1px solid lightgray;
+}
+
+.navbar_menu .icon_name span{
+    font-weight: bold;
+    display: inline-block;
+}
+
+body{
+    margin: 0;
+    background-color: var(--bodybackground-color);
+}
+.navbar_logo {
+    display: flex;
+    align-items: center;
+}
+.navbar_logo img{
+    width: 50px;
+    height: 50px;
+    padding-left:0;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.service_name{
+    font-size: 20px;
+    font-family: 'SeoulNamsanM', sans-serif;
+    top: 10px;
+    padding-left: 10px;
+}
+.navbar_menu{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+}
+
+.navbar_menu li{
+    padding: 8px 20px;
+}
+
+.icon_name{
+    font-family: 'SeoulNamsanM', sans-serif;
+    text-align: center;
+}
+
+.navbar_icon{
+    list-style: none;
+    display: flex;
+    color: var(--icon-color);
+    margin:0;
+    padding-left: 0;
+}
+
+.navbar_icon li p{
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.navber_icon li{
+    padding:8px 12px;
+    margin: 0;
+}
+/* 토글 창 띄우기 디자인 */
+.user_panel {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 15px;
+    width: 180px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Pretendard-Regular';
+}
+
+.panel_content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.panel_content ul li {
+    padding: 10px 15px;
+}
+
+.panel_content ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.panel_content ul li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* 가게 상세 페이지 관련 css */
+.store_box {
+    display: flex;
+    flex-direction: column;
+} 
+
+.store_detail_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.store_detail_leftbox {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+}
+
+.store_detail_rightbox {
+    top: 0;
+    right: 0;
+    margin-right: 10%;
+}
+
+.store_name{
+    width: 300px;
+    background-color: #4965C7;
+    border: 2px solid #4965C7;
+    padding: 1px;
+    margin-left: 7%;
+    margin-top: 10px;
+    line-height: 10px;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.store_name p{
+    color: white;
+    font-family: 'Pretendard-Regular';
+}
+
+.store_introduction{
+    width: 480px;
+    height: 300px;
+    background-color: #DEE9FF;
+    border: 2px solid #DEE9FF;
+    padding: 1px;
+    margin-top: 10px;
+    line-height: 10px;
+    border-radius: 0.5rem;
+    position: relative;
+    display: flex;
+}
+
+.store_introduction img{
+    width: 200px;
+    height: 280px;
+    margin-top: 10px;
+    margin-left: 10px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.storeMenu_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: fit-content;
+    margin-left: 3%;
+}
+
+.store_menu{
+    width: 240px;
+    height: 200px;
+    background-color: white;
+    border: 2px solid white;
+    padding: 10px;
+    margin-top: 10px;
+    line-height: 10px;
+    border-radius: 0.5rem;
+    text-align: center;
+    top: 10px;
+    right: 10px;
+    font-family: 'Pretendard-Regular';
+}
+
+.store_menu p{
+
+    font-size: 15px;
+}
+
+
+.btn_moremenu{
+    bottom: 10px;
+    left: 50%;
+    background-color: #4965C7;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 30px;
+    min-width: 240px;
+    text-align: center;
+}
+
+.store_location{
+    width: 480px;
+    background-color: #DEE9FF;
+    border: 2px solid #DEE9FF;
+    padding: 1px;
+    margin-top: 10px;
+    line-height: 10px;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.store_location p{
+    color: #4965C7;
+    font-family:'Pretendard-Regular';
+}
+
+.store_time{
+    width: 480px;
+    background-color: #DEE9FF;
+    border: 2px solid #DEE9FF;
+    padding: 1px;
+    margin-top: 10px;
+    line-height: 10px;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.store_time p{
+    color: #4965C7;
+    font-family:'Pretendard-Regular';
+}
+
+.store_phonenumber{
+    width: 480px;
+    background-color: #DEE9FF;
+    border: 2px solid #DEE9FF;
+    padding: 1px;
+    margin-top: 10px;
+    line-height: 10px;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.store_phonenumber p{
+    color: #4965C7;
+    font-family:'Pretendard-Regular';
+}
+
+.store_detail{
+    width: 480px;
+    height: 100px;
+    background-color: #DEE9FF;
+    border: 2px solid #DEE9FF;
+    padding: 10px;
+    margin-top: 10px;
+    line-height: 10px;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.store_detail p{
+    color: #4965C7;
+    font-family:'Pretendard-Regular';
+}
+
+/* 오른쪽 가게상세 박스 */
+
+.store_reviewbox{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 550px;
+    background-color: #DEE9FF;
+    border: 2px solid #DEE9FF;
+    padding: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    line-height: 10px;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.store_reviewtab {
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 100px;
+    background-color: white;
+    border: 2px solid white;
+    margin-top: 10px;
+    line-height: 10px;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-left: 19px;
+}
+  
+  
+.store_reviewbox img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-left: 5px;
+    margin-right: 10px; /* 이미지와 텍스트 사이의 간격을 둠 */
+}
+  
+.store_reviewtab p {
+    flex-grow: 1; 
+    text-align: right; /* 글씨가 오른쪽에 오게 */
+    font-family:'Pretendard-Regular';
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+/* 상단 네비게이션 바 검색창 css */
+
+.search-mode{
+    position: relative;
+    width: 350px;
+    height: 30px;
+    cursor: text;
+}
+
+input{
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: text;
+}
+
+.search_icon{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+.inputbox{
+    padding-left: 30px;
+}
+ 
+/* 리뷰 창 버튼 */
+.btn_box {
+    height: 30%;
+    margin: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.btn_morereview{
+    bottom: 20%;
+    left: 50%;
+    background-color: #4965C7;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.btn_password{
+    bottom: 10%;
+    left: 50%;
+    background-color: #4965C7;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    
+    text-align: center;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
