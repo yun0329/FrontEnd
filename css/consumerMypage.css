@@ -77,6 +77,9 @@ a{
     text-align: center;
 }
 
+* {
+    font-family: 'Pretendard-Regular';
+}
 
 .navbar_icon{
     list-style: none;
