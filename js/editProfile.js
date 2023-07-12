@@ -1,60 +1,14 @@
-function getCookie(name) {
-    var cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-      var cookies = document.cookie.split(';');
-      for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i].trim();
-        if (cookie.substring(0, name.length + 1) === (name + '=')) {
-          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-          break;
-        }
-      }
-    }
-    return cookieValue;
-  }
+document
+.getElementById("input_image")
+.addEventListener("change", function (event) {
+  const file = event.target.files[0];
+  const reader = new FileReader();
 
- function onSubmitSignup(){
-     var username = $('#username').val();
-     var password = $('#password').val();
-     var email=$('#email').val();
+  reader.onload = function (event) {
+    const imgSrc = event.target.result;
+    document.getElementById("image_preview").src = imgSrc;
+    document.getElementById("image_preview").style.display = "block";
+  };
 
-     $.ajax({
-         type: 'post',
-         url: 'https://',
-         contentType : 'application/json',
-         headers: {
-             'X-CSRFToken': getCookie('csrftoken')
-         },
-         data: JSON.stringify({
-          'username' : username,
-          'password' : password,
-          'email' : email,
-         }),
-         success : function(data){
-          alert('Success');
-         },
-         error: function(request, status, error){
-         }
-     })
- }
- document.getElementById('user-photo-input').addEventListener('change', function(event) {
-   var input = event.target;
-   if (input.files && input.files[0]) {
-     var reader = new FileReader();
-     reader.onload = function(e) {
-       document.getElementById('user-photo-preview').src = e.target.result;
-     };
-     reader.readAsDataURL(input.files[0]);
-   }
-   showData();
- });
-
-
-function toggleUserPanel() {
-   var userPanel = document.getElementById("userPanel");
-   if (userPanel.style.display === "none") {
-       userPanel.style.display = "block";
-   } else {
-       userPanel.style.display = "none";
-   }
-}
+  reader.readAsDataURL(file);
+});
