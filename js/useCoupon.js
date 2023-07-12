@@ -1,12 +1,3 @@
-function toggleUserPanel() {
-  var userPanel = document.getElementById("userPanel");
-  if (userPanel.style.display === "none") {
-    userPanel.style.display = "block";
-  } else {
-    userPanel.style.display = "none";
-  }
-}
-
 var grantType = localStorage.getItem("grantType");
 var accessToken = localStorage.getItem("accessToken");
 var refreshToken = localStorage.getItem("refreshToken");
