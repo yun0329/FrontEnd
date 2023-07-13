@@ -19,30 +19,85 @@ function readURL(input) {
   }
 }
 
-// img 클릭됬을 때 함수
-function handleImgClick2(data) {
-  var num = data.id.substring(data.id.length - 1);
-  var input = document.getElementById(`input_menu_img_${num}`);
-  input.click();
-}
+// // img 클릭됬을 때 함수
+// function handleImgClick2(data) {
+//   var num = data.id.substring(data.id.length - 1);
+//   var input = document.getElementById(`input_menu_img_${num}`);
+//   input.click();
+// }
 
-//input 클릭됬을 때 함수
-function readURL2(input) {
-  var num = input.id.substring(input.id.length - 1);
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      document.getElementById(`menu_img_${num}`).src = e.target.result;
-    };
-    reader.readAsDataURL(input.files[0]);
+// //input 클릭됬을 때 함수
+// function readURL2(input) {
+//   var num = input.id.substring(input.id.length - 1);
+//   if (input.files && input.files[0]) {
+//     var reader = new FileReader();
+//     reader.onload = function (e) {
+//       document.getElementById(`menu_img_${num}`).src = e.target.result;
+//     };
+//     reader.readAsDataURL(input.files[0]);
+//   } else {
+//     document.getElementById(`menu_img_${num}`).src = "";
+//   }
+// }
+function displayImage(input) {
+  var previewImage = input.nextElementSibling;
+  var file = input.files[0];
+  var reader = new FileReader();
+
+  reader.onload = function (event) {
+    previewImage.src = event.target.result;
+  };
+
+  if (file) {
+    reader.readAsDataURL(file);
   } else {
-    document.getElementById(`menu_img_${num}`).src = "";
+    previewImage.src = "#";
   }
 }
 
-// // Attach the event listener to the checkbox
-// var uploadCheckbox = document.getElementById("uploadCheckbox");
-// uploadCheckbox.addEventListener("change", handleImageUpload);
+function addInputColumn() {
+  var inputWrapper = document.createElement("div");
+  inputWrapper.classList.add("inputWrapper");
+
+  var photoInput = document.createElement("input");
+  photoInput.type = "file";
+  photoInput.name = "photo[]";
+  photoInput.accept = "image/*";
+  photoInput.onchange = function () {
+    displayImage(this);
+  };
+
+  var previewImage = document.createElement("img");
+  previewImage.classList.add("previewImage");
+  previewImage.src = "./img/menu_basic_img.png";
+  previewImage.alt = "Preview";
+  previewImage.setAttribute("width", "300px");
+  previewImage.setAttribute("height", "150px");
+
+  var menuInput = document.createElement("input");
+  menuInput.type = "text";
+  menuInput.name = "menu[]";
+  menuInput.placeholder = "메뉴를 입력하세요";
+
+  var priceInput = document.createElement("input");
+  priceInput.type = "text";
+  priceInput.name = "price[]";
+  priceInput.placeholder = "가격을 입력하세요";
+
+  inputWrapper.appendChild(photoInput);
+  inputWrapper.appendChild(previewImage);
+  inputWrapper.appendChild(menuInput);
+  inputWrapper.appendChild(priceInput);
+
+  var inputsContainer = document.getElementById("inputsContainer");
+  inputsContainer.appendChild(inputWrapper);
+}
+
+$(document).ready(function () {
+  $("#removeButton").click(function () {
+    $("div").remove(".inputWrapper:last-child");
+  });
+});
 
 function openAddressPopup() {
   new daum.Postcode({
