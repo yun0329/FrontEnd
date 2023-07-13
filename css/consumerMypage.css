@@ -266,6 +266,16 @@ input{
     background-color: #bbb; 
   }
 
+.main-box {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.text h4 {
+    margin: 0 0 0 15%;
+}
+
   .container {
     display: flex;
     align-items: center;
