@@ -14,11 +14,10 @@ function refresh(){
 
         success : function(data){
             localStorage.setItem('grantType', 'accessToken', 'refreshToken');
-            alert('success');
+           alert('success');
         },
         error: function(status){
            alert('권한이 없는 회원의 접근입니다.');
-           console.log(grantType, accessToken, refreshToken);
         }
     })
 }
