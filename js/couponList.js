@@ -14,7 +14,7 @@ var refreshToken = localStorage.getItem("refreshToken");
 $(document).ready(function () {
   $.ajax({
     type: "GET",
-    url: `${서버주소}/api/mine`,
+    url: `http://127.0.0.1:8080/api/mine`,
     contentType: "application/json",
     headers: {
       Authorization: grantType + " " + accessToken,
