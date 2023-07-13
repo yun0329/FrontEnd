@@ -81,6 +81,9 @@
 #chooseButton2,
 #chooseButton3,
 #chooseButton4 {
+  display: flex;
+  align-items: center;
   background-color: #95bfff;
   border-radius: 15px;
+  width: 100px;
 }
