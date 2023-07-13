@@ -69,12 +69,15 @@
   position: relative;
 }
 
-.chooseCoupon_container3 input {
+.chooseCoupon_container3 p {
   display: flex;
   flex-direction: column;
-  margin: 10px 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
   border: none;
   background-color: transparent;
+  width: 1500px;
 }
 
 #chooseButton1,
@@ -83,7 +86,9 @@
 #chooseButton4 {
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: #95bfff;
   border-radius: 15px;
   width: 100px;
+  margin: 5px;
 }

@@ -1,3 +1,7 @@
+* {
+  font-family: "Pretendard-Regular";
+}
+
 .writeReview_header {
   display: flex;
   padding: 10px 30px;
@@ -9,11 +13,6 @@
   display: flex;
   align-items: center;
   padding: 10px 30px;
-}
-
-.writeReview_container1 {
-  display: flex;
-  padding-right: 50px;
 }
 
 .writeReview_container2 {
