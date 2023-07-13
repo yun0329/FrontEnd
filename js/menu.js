@@ -1,7 +1,9 @@
 //해당 가게의 메뉴정보를 불러온다.
-function getMenus() {
+function getMenus(storeId) {
+  
+  var storeId = localStorage.getItem('storeId');
     $.ajax({
-      url: '/api/menu',
+      url: 'http://127.0.0.1:8080/menu'+ storeId,
       type: 'GET',
       success: function(data) {
         var menuCard = document.getElementById('menu-container');
@@ -10,7 +12,6 @@ function getMenus() {
   
         for (var i = 0; i < length; i++) {
           var menu = menus[i];
-  
           var card = document.createElement('div');
           card.className = 'card';
           card.style.width = '18rem';
@@ -51,41 +52,45 @@ function getMenus() {
   });
   
   
+
   //메뉴 정보를 등록한다.
-  function registerMenu(menuData) {
+  function registerMenu() {
+  
+    var inputMenu = document.getElementById('#input_menu').val;
+    var inputPrice = document.getElementById('#name_input').val;
     $.ajax({
-      url: '/api/menu/register',
+      url: 'http://127.0.0.1:8080/menu/register',
       type: 'POST',
-      data: JSON.stringify(menuData),
+      data: JSON.stringify({
+        'menu_name': inputMenu,
+        'price': inputPrice,
+        'menu_img': 'menu_img'
+      }),
       contentType: 'application/json',
       success: function(response) {
-        console.log('메뉴 등록 성공!');
-        location.href="/"; //등록 성공 시 이동이 마이페이지인지 모르겠음
+        console.log(response);
       },
       error: function(error) {
-        console.log('메뉴 등록 실패: ' + error.responseText);
+        console.log(error);
       }
     });
-    
-  function completeNewPost_cbv(){
-    $("#resister").trigger("click")
   }
-  }
+  $("#resister_button").click(function() {
+    resisterMenu();
+  });
   
-  
-  
+
+
   //메뉴정보를 불러온다.
-  function get_detail_Menus() {
+  function get_detail_Menus(menuId) {
     $.ajax({
-      url: '/api/menu',
+      url: 'http://127.0.0.1:8080/menu'+ menuId,
       type: 'GET',
-      data: JSON.stringify({
-        'menus' : $('#menusInput').val(),
-    }),
       success: function(response) {
+  
         console.log('메뉴 정보 불러옴!');
         location.reload()
-        location.href = "/menu.html"; 
+        location.href = "http://127.0.0.1:8080/menu/detail"+menuId; 
       },
       error: function() {
         console.log('에러 발생');
