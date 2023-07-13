@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/logo.png">
-    <script src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/ba49d39b5e.js" crossorigin="anonymous"></script>
     <title>소확행</title>
 </head>
@@ -26,7 +25,7 @@
         <ul class="navbar_menu">
             <p class="icon_name"><span>소</span>상공인·<span>소</span>비자에게 <span>확</span>실한 <span>행</span>복</p>
         </ul>
-        <ul class="navbar_icon">  
+        <ul class="navbar_icon">
             <li><p><i class="fa-regular fa-user" onclick="toggleUserPanel()"></i></p></li>
         </ul>
     </nav>
@@ -46,50 +45,17 @@
     <div class="category_name">
         <p>"카테고리 이름"</p>
     </div>
-    <div class="store-list">
-        <div class="store_card">
-            <img src="/img/image1.png" alt="장소이미지">
-            <div class="store_card_content">
-                <h3>가게 이름</h3>
-                <p>가게 위치</p>
-                <a href="storedetail.html" target="_blank">장소 자세히 보기</a>
-            </div>
-        </div>
-        <div class="store_card">
-            <img src="/img/image1.png" alt="장소이미지">
-            <div class="store_card_content">
-                <h3>가게 이름</h3>
-                <p>가게 위치</p>
-                <a href="장소의 링크" target="_blank">장소 자세히 보기</a>
-            </div>
-        </div>
-        <div class="store_card">
-            <img src="/img/image1.png" alt="장소이미지">
-            <div class="store_card_content">
-                <h3>가게 이름</h3>
-                <p>가게 위치</p>
-                <a href="장소의 링크" target="_blank">장소 자세히 보기</a>
-            </div>
-        </div>
-        <div class="store_card">
-            <img src="/img/image1.png" alt="장소이미지">
-            <div class="store_card_content">
-                <h3>가게 이름</h3>
-                <p>가게 위치</p>
-                <a href="장소의 링크" target="_blank">장소 자세히 보기</a>
-            </div>
-        </div>
-
-        <div class="store_card">
-            <img src="/img/image1.png" alt="장소이미지">
-            <div class="store_card_content">
-                <h3>가게 이름</h3>
-                <p>가게 위치</p>
-                <a href="장소의 링크" target="_blank">장소 자세히 보기</a>
-            </div>
-        </div>
+    <div class="store-list" id="store-list">
+<!--        <div class="store_card">-->
+<!--            <img src="/img/image1.png" alt="장소이미지">-->
+<!--            <div class="store_card_content" id="store_card_content">-->
+<!--                <h3>가게 이름</h3>-->
+<!--                <p>가게 위치</p>-->
+<!--                <p>장소 자세히 보기</p>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
-    
+
     <!-- 사용자 패널 -->
     <div id="userPanel" class="user_panel">
     <div class="panel_content">
@@ -99,5 +65,8 @@
         </ul>
     </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
