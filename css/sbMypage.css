@@ -29,13 +29,6 @@
   padding-right: 100px;
 }
 
-.sbMypage_header2 img {
-  width: 211px;
-  height: 192px;
-  border-radius: 50%;
-  border: 1px solid black;
-}
-
 .sbMypage_header3 {
   display: flex;
   flex-direction: column;
