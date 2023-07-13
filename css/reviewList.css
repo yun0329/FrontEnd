@@ -265,14 +265,19 @@ input{
   .box-container {
     display: flex;
     align-items: flex-start;
-    gap: 10px; /* Add 10px gap between elements */
+    gap: 5px;
+    border: 3px solid #b1b1b1;
+    width: 1267px;
+    height: 139px;
+    border-radius: 20px;
+    margin: 0 100px 20px 50px;
   }
   
   .box {
     width: 179px;
     height: 139px;
     border-radius: 15px;
-    background-color: #D9D9D9;
+   
     text-align: center;
     margin-left: 190px;
   }
@@ -282,10 +287,7 @@ input{
     
   }
   
-  .store-info {
-    width: 139px;
-    height: 134px; /* Allow the element to grow and fill remaining space */
-  }
+  
   
   .big-box {
     width:775px;
@@ -306,15 +308,70 @@ input{
     margin-top: -10px;
   }
   
-  .review-box {
-    width:559px;
-    height:44px;
-    background-color: white;
-    border-radius: 15px;
-    margin-top: 30px;
-    text-align: center;
+
+
+
+
+  /* 리뷰박스 css */
+  .store-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
+
+  .starLevel {
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    color: #E7E7E7;
+   }
+   
+   .starLevel span {
+     position: absolute;
+     left: 0;
+     color: rgb(247, 230, 45);
+   }
+
+   
+  /* 리뷰 리스트 */
+  .content-box {
+    display: flex;
+    padding-bottom: 20px;
+  }
+
+  .starDate {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+  }
+
+  #userState {
+    font-size: 25px;
+    width: fit-content;
+    margin: 2% 0 1% 0;
+  }
+
+
+
+  .upload-date p{
   
+    color: rgb(112, 112, 112);
+  }
+
+.content {
+  width: 600px;
+}
+
+  .user-review {
+    margin-top: 7px;
+  }
+  .user-review p {
+    margin: 0;
+    font-size: large;
+  }
+ 
   .photo-box {
     margin-left: 20px;
     width:179px;
@@ -359,4 +416,9 @@ input{
 .bottom_navbar_menu li a:hover {
     background-color: #ddd;
 }
-  
+ .box img {
+    margin-top: 1px;
+    width: 179px;
+    height: 139px;
+    margin-left: -200px;
+ }
