@@ -15,7 +15,7 @@ function signupClient(event){
 
     $.ajax({
         type: 'POST',
-        url: '/api/signup/client',
+        url: 'http://127.0.0.1:8080/signup/client',
         contentType : 'application/json',
         headers: {
             'Authorization': grantType + ' ' + accessToken,
@@ -31,7 +31,7 @@ function signupClient(event){
         }),
         success : function(data){
           alert('회원가입이 완료되었습니다.');
-          location.href="/api/login";
+          location.href="http://127.0.0.1:8080/login";
         },
         error: function(request, status, error){
           console.log(userId, userPw, name, storeName, storeAddr, regNum);
