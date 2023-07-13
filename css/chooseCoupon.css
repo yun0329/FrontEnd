@@ -77,13 +77,10 @@
   margin-left: 30px;
   border: none;
   background-color: transparent;
-  width: 1500px;
+  width: 900px;
 }
 
-#chooseButton1,
-#chooseButton2,
-#chooseButton3,
-#chooseButton4 {
+.chooseCoupon_container3 > input {
   display: flex;
   align-items: center;
   justify-content: center;

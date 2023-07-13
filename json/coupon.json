@@ -1,0 +1,16 @@
+{
+  "responseList": [
+    {
+      "couponId": "couponId",
+      "content": "content",
+      "couponNum": "couponNum",
+      "storeId": "storeId"
+    },
+    {
+      "coupon_id": "couponId",
+      "content": "content",
+      "couponNum": "couonNum",
+      "storeId": "storeId"
+    }
+  ]
+}
