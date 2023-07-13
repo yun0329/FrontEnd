@@ -18,6 +18,7 @@ function refresh(){
         },
         error: function(status){
            alert('권한이 없는 회원의 접근입니다.');
+           console.log(grantType, accessToken, refreshToken);
         }
     })
 }
