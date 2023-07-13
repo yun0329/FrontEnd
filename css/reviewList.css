@@ -291,9 +291,9 @@ input{
     width:775px;
     height:139px;
     border-radius: 15px;
-    background-color: rgba(222, 233, 255, 0.7);
+    border: 3px solid #BCC9FA;
     padding: 10px;
-    display: flex;
+   
     margin-bottom: 10px;
   } 
   .content-container {
@@ -308,11 +308,11 @@ input{
   
   .review-box {
     width:559px;
-    height:64px;
+    height:44px;
     background-color: white;
     border-radius: 15px;
-    margin-top: 70px;
-    margin-left: -100px;
+    margin-top: 30px;
+    text-align: center;
   }
   
   .photo-box {

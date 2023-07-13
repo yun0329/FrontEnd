@@ -278,6 +278,7 @@ input{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    
   }
   .small-box{
     width: 265px;
@@ -288,6 +289,7 @@ input{
     margin-top: 10px;
     align-items: center;
     justify-content: center;
+    
   }
   .store-picture {
     text-align: center;
@@ -315,4 +317,5 @@ input{
     border: none;
     color: white;
     margin-left: 170px;
+    margin-top: 80px;
   }
