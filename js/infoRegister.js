@@ -108,35 +108,17 @@ var accessToken = localStorage.getItem("accessToken");
 var refreshToken = localStorage.getItem("refreshToken");
 
 $.ajax({
-  type: "GET",
-  url: `${서버주소}/api/store`,
-  contentType: "application/json",
-  headers: {
-    Authorization: grantType + " " + accessToken,
-    Refresh: refreshToken,
-  },
-  success: function (data) {
-    $("#address-1").val(data.store_addr);
-    $("#registration_number").val(data.reg_num);
-    $(".store-real-upload").attr("src", data.store_img);
-  },
-  error: function () {
-    alert("소상공인 회원 등록자가 아닙니다.");
-  },
-});
-
-$.ajax({
   type: "POST",
-  url: `${서버주소}/api/store`,
+  url: `http://127.0.0.1:8080/api/store`,
   contentType: "application/json",
   headers: {
     Authorization: grantType + " " + accessToken,
     Refresh: refreshToken,
   },
   data: JSON.stringify({
-    store_intro: "store_intro",
-    store_img: "store_img_link",
-    certification_num: 1234,
+    storeIntro: $("#store1_introduction").val(),
+    storeImg: $("#store1_img_1").attr("src"),
+    certificationNum: $("#registration_number1").val(),
   }),
   success: function (data) {
     alert("등록 완료되었습니다.");

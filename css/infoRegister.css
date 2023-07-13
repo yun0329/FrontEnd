@@ -134,21 +134,8 @@
 
 .select {
   display: flex;
-  padding: 0px 50px;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-}
-
-#open-time-select1 {
-  border-radius: 10px;
-  width: 130px;
-  height: 40px;
-}
-
-#closing-time-select1 {
-  border-radius: 10px;
-  width: 130px;
-  height: 40px;
 }
 
 select option[value=""][disabled] {

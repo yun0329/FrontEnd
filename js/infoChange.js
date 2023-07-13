@@ -136,9 +136,11 @@ $.ajax({
     Refresh: refreshToken,
   },
   success: function (data) {
-    $("#address_input1").val(data.store_addr);
-    $("#registration_number").val(data.reg_num);
-    $("#store_img_1").attr("src", data.store_img);
+    $("#address_input1").val(data.storeAddr);
+    $("#registration_number").val(data.regNum);
+    $("#store_introduction").val(data.storeIntro);
+    $("#store_img_1").attr("src", data.storeImg);
+    $("#certification_number").val(data.certificationNum);
   },
   error: function () {
     alert("소상공인 회원 등록자가 아닙니다.");
