@@ -15,6 +15,10 @@
     font-family: 'Pretendard-Regular';
 }
 
+body{
+    width: 100vw;
+    height: 100vh;
+}
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
 
 :root{
@@ -117,42 +121,6 @@ a{
     background: #4965C7;
     transition: all .3s ease-in-out;
 }
-.category a:nth-child(1).is-current ~ .nav-underline {
-    left: calc(var(--nav-width) * 0);
-}
-.category a:nth-child(2).is-current ~ .nav-underline {
-    left: calc(var(--nav-width) * 1);
-}
-.category a:nth-child(3).is-current ~ .nav-underline {
-    left: calc(var(--nav-width) * 2);
-}
-.category a:nth-child(4).is-current ~ .nav-underline {
-    left: calc(var(--nav-width) * 3);
-}
-.category a:nth-child(5).is-current ~ .nav-underline {
-    left: calc(var(--nav-width) * 4);
-}
-.category a:nth-child(6).is-current ~ .nav-underline {
-    left: calc(var(--nav-width) * 5);
-}
-.category a:nth-child(1):hover ~ .nav-underline {
-    left: calc(var(--nav-width) * 0);
-}
-.category a:nth-child(2):hover ~ .nav-underline {
-    left: calc(var(--nav-width) * 1);
-}
-.category a:nth-child(3):hover ~ .nav-underline {
-    left: calc(var(--nav-width) * 2);
-}
-.category a:nth-child(4):hover ~ .nav-underline {
-    left: calc(var(--nav-width) * 3);
-}
-.category a:nth-child(5):hover ~ .nav-underline {
-    left: calc(var(--nav-width) * 4);
-}
-.category a:nth-child(6):hover ~ .nav-underline {
-    left: calc(var(--nav-width) * 5);
-}
 
 /* 메뉴 언더라인 */
 
@@ -185,37 +153,10 @@ input{
     padding-left: 30px;
 }
 
-.secession_icon_name{
-    font-family: 'SeoulNamsanM', sans-serif;
-}
-
 .navbar_menu .secession_icon_name span{
     font-weight: bold;
 }
 
-.secession_content_div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.secession_content_div h1{
-    margin: 10px 0;
-    font-family: 'Pretendard-Regular';
-}
-
-.secession_content_div p {
-    margin: 10px 0;
-    font-family: 'Pretendard-Regular';
-}
-
-.secession_content_div img{
-    margin-top: 50px;
-    width: 100px;
-    height: 100px;
-}
 .button {
     position: absolute;
     bottom: 15%;
@@ -284,9 +225,17 @@ input{
     align-items: center;
     margin-left: 5px;
 }
+
+.box-container-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
 .box-container {
     display: flex;
-    margin-left: 300px;
+    margin: 0 auto;
     gap: 15px;
 }
 .curve-box1 {
@@ -318,13 +267,13 @@ input{
     align-items: center;
     justify-content: center;
     border-radius: 15px;
-    margin-top: 10px;
-    margin-left: 210px;
+    margin: 10px auto 0 auto;
     }
 .additional-box1 p{
     font-size: 25px;
     color: rgb(0, 0, 0);
     font-family: 'Pretendard-Regular';
+
 }
 .additional-box2 {
     width: 1090px;
@@ -334,8 +283,7 @@ input{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    margin-top: 10px;
-    margin-left: 210px;
+    margin: 10px auto 0 auto;
     }
 
     .text {
@@ -357,8 +305,7 @@ input{
         align-items: center;
         justify-content: center;
         border-radius: 10px;
-        margin-top: 10px;
-        margin-left: 210px;
+        margin: 10px auto 0 auto;
         border: 1px solid black;
         }
 
@@ -391,4 +338,51 @@ input{
         .bottom_navbar_menu li a:hover {
             background-color: #ddd;
         }
-        
+        @media (max-width: 800px) {
+            .container {
+              padding: 10px;
+            }
+          
+            .navbar_logo img {
+              width: 40px;
+              height: 40px;
+            }
+          
+            .navbar_logo a.service_name {
+              font-size: 16px;
+            }
+          
+            .search-mode {
+              width: 250px;
+            }
+          
+            .inputbox {
+              padding-left: 25px;
+            }
+          
+            .bottom_navbar {
+              padding: 5px;
+            }
+          
+            .bottom_navbar_menu li a {
+              padding: 5px;
+              font-size: 12px;
+            }
+          
+            .box-container {
+              flex-wrap: wrap;
+              margin-left: 0;
+            }
+          
+            .curve-box1,
+            .curve-box2 {
+                width: 100%;
+                margin-left: 0;
+            }
+            .additional-box1,
+            .additional-box2,
+            .coupon-box {
+              width: 100%;
+              margin-left: 0;
+            }
+          }       
