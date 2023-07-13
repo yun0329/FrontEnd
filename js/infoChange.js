@@ -179,6 +179,120 @@ function openAddressPopup() {
   }).open();
 }
 
+// 버튼 클릭 시 옵션바 추가
+function addOptionBar() {
+  var selectContainer = document.querySelector(".new_select");
+
+  // 새로운 옵션바 요소 생성
+  var newOptionBar = document.createElement("div");
+  newOptionBar.className = "select";
+
+  // 첫 번째 선택 옵션 추가
+  var daySelect = document.createElement("select");
+  daySelect.id = "day-select";
+  var dayOption = document.createElement("option");
+  dayOption.value = "";
+  dayOption.disabled = true;
+  dayOption.selected = true;
+  dayOption.appendChild(document.createTextNode("요일"));
+  daySelect.appendChild(dayOption);
+
+  // 요일 옵션 추가
+  var days = [
+    "월요일",
+    "화요일",
+    "수요일",
+    "목요일",
+    "금요일",
+    "토요일",
+    "일요일",
+  ];
+  for (var i = 0; i < days.length; i++) {
+    var option = document.createElement("option");
+    option.value = days[i];
+    option.appendChild(document.createTextNode(days[i]));
+    daySelect.appendChild(option);
+  }
+
+  // 첫 번째 시간 옵션 추가
+  var openTimeSelect = document.createElement("select");
+  openTimeSelect.id = "open-time-select";
+  var openTimeOption = document.createElement("option");
+  openTimeOption.value = "";
+  openTimeOption.disabled = true;
+  openTimeOption.selected = true;
+  openTimeOption.appendChild(document.createTextNode("오픈시간 시/분"));
+  openTimeSelect.appendChild(openTimeOption);
+
+  // 시간 옵션 추가
+  var hours = [
+    "07:00",
+    "08:00",
+    "09:00",
+    "10:00",
+    "11:00",
+    "12:00",
+    "13:00",
+    "14:00",
+    "15:00",
+  ];
+  for (var j = 0; j < hours.length; j++) {
+    var hourOption = document.createElement("option");
+    hourOption.value = hours[j];
+    hourOption.appendChild(document.createTextNode(hours[j]));
+    openTimeSelect.appendChild(hourOption);
+  }
+
+  // 텍스트 노드 추가
+  var tilde = document.createElement("p");
+  tilde.appendChild(document.createTextNode("~"));
+
+  // 두 번째 시간 옵션 추가
+  var closingTimeSelect = document.createElement("select");
+  closingTimeSelect.id = "closing-time-select";
+  var closingTimeOption = document.createElement("option");
+  closingTimeOption.value = "";
+  closingTimeOption.disabled = true;
+  closingTimeOption.selected = true;
+  closingTimeOption.appendChild(document.createTextNode("마감시간 시/분"));
+  closingTimeSelect.appendChild(closingTimeOption);
+
+  // 시간 옵션 추가
+  var closingHours = [
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00",
+    "23:00",
+    "24:00",
+  ];
+  for (var k = 0; k < closingHours.length; k++) {
+    var closingHourOption = document.createElement("option");
+    closingHourOption.value = closingHours[k];
+    closingHourOption.appendChild(document.createTextNode(closingHours[k]));
+    closingTimeSelect.appendChild(closingHourOption);
+  }
+
+  // 새로운 옵션바 요소를 기존 컨테이너에 추가
+  newOptionBar.appendChild(daySelect);
+  newOptionBar.appendChild(openTimeSelect);
+  newOptionBar.appendChild(tilde);
+  newOptionBar.appendChild(closingTimeSelect);
+  selectContainer.appendChild(newOptionBar);
+}
+
+// 버튼 클릭 시 옵션바 삭제
+function removeOptionBar() {
+  var selectContainer = document.querySelector(".new_select");
+  var optionBars = selectContainer.getElementsByClassName("select");
+
+  // 마지막 옵션바 요소 제거
+  if (optionBars.length > 0) {
+    selectContainer.removeChild(optionBars[optionBars.length - 1]);
+  }
+}
+
 var grantType = localStorage.getItem("grantType");
 var accessToken = localStorage.getItem("accessToken");
 var refreshToken = localStorage.getItem("refreshToken");
