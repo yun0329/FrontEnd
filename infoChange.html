@@ -134,48 +134,9 @@
       <p>5. 가게 운영시간</p>
 
         <div class="select">
-          <select id="day-select">
-            <option value="" disabled selected>요일</option>
-            <option value="월요일">월요일</option>
-            <option value="화요일">화요일</option>
-            <option value="수요일">수요일</option>
-            <option value="목요일">목요일</option>
-            <option value="금요일">금요일</option>
-            <option value="토요일">토요일</option>
-            <option value="일요일">일요일</option>
-          </select>
-  
-          <select id="open-time-select">
-            <option value="" disabled selected>오픈시간 시/분</option>
-            <option value="07:00">07:00</option>
-            <option value="08:00">08:00</option>
-            <option value="09:00">09:00</option>
-            <option value="10:00">10:00</option>
-            <option value="11:00">11:00</option>
-            <option value="12:00">12:00</option>
-            <option value="13:00">13:00</option>
-            <option value="14:00">14:00</option>
-            <option value="15:00">15:00</option>
-          </select>
-          <p>~</p>
-          <select id="closing-time-select">
-            <option value="" disabled selected>마감시간 시/분</option>
-            <option value="18:00">18:00</option>
-            <option value="19:00">19:00</option>
-            <option value="20:00">20:00</option>
-            <option value="21:00">21:00</option>
-            <option value="22:00">22:00</option>
-            <option value="23:00">23:00</option>
-            <option value="24:00">24:00</option>
-          </select>
+          <input id="operating_time" type="text" placeholder="오픈시간 ~ 마감시간 입력 (00:00 ~ 00:00) ">
         </div>
-        <div class="new_select"></div>
-
-      <button id="select_button1" onclick="addOptionBar()">+</button>
-      <button id="select_button2" onclick="removeOptionBar()">-</button>
      
-
-
       <p>6. 사업자 등록번호</p>
       <input
         id="registration_number"
@@ -193,7 +154,7 @@
       />
 
       <div class="change">
-        <input type="button" value="수정하기" id="change_button" onclick="completeNewPost();"/>
+        <a href="./sbMypage.html"><input type="button" value="수정하기" id="change_button"/></a>
       </div>
     </div>
   </body>

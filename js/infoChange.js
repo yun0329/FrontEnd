@@ -19,62 +19,6 @@ function readURL(input) {
   }
 }
 
-  //메뉴정보 수정한다.
-  function completeNewPost() {
-    var menuId = 1;
-    var menu_name = $('#menu').val();
-    var price = $('#price').val();
-    var menu_img = $('#menu_img_link').val();
-
-    $.ajax({
-      type: 'PUT', 
-      url: 'http://127.0.0.1:8080/menu/'+ menuId,
-      contentType: 'application/json',
-      data: JSON.stringify({
-        'menu_name': menu_name,
-        'price': price,
-        'menu_img': menu_img
-      }),
-      success: function(data) {
-        alert('메뉴수정 완료');
-        location.href = "/menu.html"; 
-      },
-      error: function() {
-        alert('메뉴수정 실패');
-      }
-    });
-  }
-  function completePost_cbv(){
-    $("#form_submit").trigger("click")
-}
-
-  //메뉴 정보를 삭제한다.
-  function deleteMenu() {
-    var menuId = localStorage.getItem('menuId');
-  
-    $.ajax({
-      type: 'DELETE',
-      url: 'http://127.0.0.1:8000/post/delete/' + menuId,
-      headers: {
-        'Authorization': 'AccessToken',
-        'Refresh-Token': 'RefreshToken',
-      },
-      success: function(data) {
-        alert('삭제 성공');
-        $("#" + menuId).remove();
-        location.href = '/post/list/cbv/';
-      },
-      error: function(xhr) {
-        if (xhr.status === 401) {
-          var errorMessage = JSON.parse(xhr.responseText).message;
-          alert('삭제 실패: ' + errorMessage);
-        } else {
-          alert('삭제 실패');
-        }
-      }
-    });
-  }
-
 // // img 클릭됬을 때 함수
 // function handleImgClick2(data) {
 //   var num = data.id.substring(data.id.length - 1);
@@ -179,177 +123,50 @@ function openAddressPopup() {
   }).open();
 }
 
-// 버튼 클릭 시 옵션바 추가
-function addOptionBar() {
-  var selectContainer = document.querySelector(".new_select");
-
-  // 새로운 옵션바 요소 생성
-  var newOptionBar = document.createElement("div");
-  newOptionBar.className = "select";
-
-  // 첫 번째 선택 옵션 추가
-  var daySelect = document.createElement("select");
-  daySelect.id = "day-select";
-  var dayOption = document.createElement("option");
-  dayOption.value = "";
-  dayOption.disabled = true;
-  dayOption.selected = true;
-  dayOption.appendChild(document.createTextNode("요일"));
-  daySelect.appendChild(dayOption);
-
-  // 요일 옵션 추가
-  var days = [
-    "월요일",
-    "화요일",
-    "수요일",
-    "목요일",
-    "금요일",
-    "토요일",
-    "일요일",
-  ];
-  for (var i = 0; i < days.length; i++) {
-    var option = document.createElement("option");
-    option.value = days[i];
-    option.appendChild(document.createTextNode(days[i]));
-    daySelect.appendChild(option);
-  }
-
-  // 첫 번째 시간 옵션 추가
-  var openTimeSelect = document.createElement("select");
-  openTimeSelect.id = "open-time-select";
-  var openTimeOption = document.createElement("option");
-  openTimeOption.value = "";
-  openTimeOption.disabled = true;
-  openTimeOption.selected = true;
-  openTimeOption.appendChild(document.createTextNode("오픈시간 시/분"));
-  openTimeSelect.appendChild(openTimeOption);
-
-  // 시간 옵션 추가
-  var hours = [
-    "07:00",
-    "08:00",
-    "09:00",
-    "10:00",
-    "11:00",
-    "12:00",
-    "13:00",
-    "14:00",
-    "15:00",
-  ];
-  for (var j = 0; j < hours.length; j++) {
-    var hourOption = document.createElement("option");
-    hourOption.value = hours[j];
-    hourOption.appendChild(document.createTextNode(hours[j]));
-    openTimeSelect.appendChild(hourOption);
-  }
-
-  // 텍스트 노드 추가
-  var tilde = document.createElement("p");
-  tilde.appendChild(document.createTextNode("~"));
-
-  // 두 번째 시간 옵션 추가
-  var closingTimeSelect = document.createElement("select");
-  closingTimeSelect.id = "closing-time-select";
-  var closingTimeOption = document.createElement("option");
-  closingTimeOption.value = "";
-  closingTimeOption.disabled = true;
-  closingTimeOption.selected = true;
-  closingTimeOption.appendChild(document.createTextNode("마감시간 시/분"));
-  closingTimeSelect.appendChild(closingTimeOption);
-
-  // 시간 옵션 추가
-  var closingHours = [
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-    "23:00",
-    "24:00",
-  ];
-  for (var k = 0; k < closingHours.length; k++) {
-    var closingHourOption = document.createElement("option");
-    closingHourOption.value = closingHours[k];
-    closingHourOption.appendChild(document.createTextNode(closingHours[k]));
-    closingTimeSelect.appendChild(closingHourOption);
-  }
-
-  // 새로운 옵션바 요소를 기존 컨테이너에 추가
-  newOptionBar.appendChild(daySelect);
-  newOptionBar.appendChild(openTimeSelect);
-  newOptionBar.appendChild(tilde);
-  newOptionBar.appendChild(closingTimeSelect);
-  selectContainer.appendChild(newOptionBar);
-}
-
-// 버튼 클릭 시 옵션바 삭제
-function removeOptionBar() {
-  var selectContainer = document.querySelector(".new_select");
-  var optionBars = selectContainer.getElementsByClassName("select");
-
-  // 마지막 옵션바 요소 제거
-  if (optionBars.length > 0) {
-    selectContainer.removeChild(optionBars[optionBars.length - 1]);
-  }
-}
-
 var grantType = localStorage.getItem("grantType");
 var accessToken = localStorage.getItem("accessToken");
 var refreshToken = localStorage.getItem("refreshToken");
 
 $.ajax({
   type: "GET",
-  url: `${서버주소}/api/store`,
+  url: `http://127.0.0.1:8080/api/store`,
   contentType: "application/json",
   headers: {
     Authorization: grantType + " " + accessToken,
     Refresh: refreshToken,
   },
   success: function (data) {
-    $("#address_input1").val(data.store_addr);
-    $("#registration_number").val(data.reg_num);
-    $("#store_img_1").attr("src", data.store_img);
+    $("#address_input1").val(data.storeAddr);
+    $("#registration_number").val(data.regNum);
+    $("#store_introduction").val(data.storeIntro);
+    $("#store_img_1").attr("src", data.storeImg);
+    $("#certification_number").val(data.certificationNum);
   },
   error: function () {
     alert("소상공인 회원 등록자가 아닙니다.");
   },
 });
 
-$.ajax({
-  type: "PUT",
-  url: `${서버주소}/api/store`,
-  contentType: "application/json",
-  headers: {
-    Authorization: grantType + " " + accessToken,
-    Refresh: refreshToken,
-  },
-  data: JSON.stringify({
-    store_intro: "store_intro",
-    store_img: "store_img_link",
-    certification_num: 1234,
-  }),
-  success: function (data) {
-    alert("수정 완료되었습니다.");
-    location.href = "/sbMypage.html";
-  },
-  error: function () {
-    alert("소상공인 회원 등록자가 아닙니다.");
-  },
-});
-
-$.ajax({
-  type: "DELETE",
-  url: `${서버주소}/api/store`,
-  contentType: "application/json",
-  headers: {
-    Authorization: grantType + " " + accessToken,
-    Refresh: refreshToken,
-  },
-  success: function (data) {
-    alert("수정 완료되었습니다.");
-    location.href = "/sbMypage.html";
-  },
-  error: function () {
-    alert("소상공인 회원 등록자가 아닙니다.");
-  },
+$(document).ready(function () {
+  $.ajax({
+    type: "PUT",
+    url: `http://127.0.0.1:8080/api/store`,
+    contentType: "application/json",
+    headers: {
+      Authorization: grantType + " " + accessToken,
+      Refresh: refreshToken,
+    },
+    data: JSON.stringify({
+      store_intro: "store_intro",
+      store_img: "store_img_link",
+      certification_num: 1234,
+    }),
+    success: function (data) {
+      alert("수정 완료되었습니다.");
+      location.href = "/sbMypage.html";
+    },
+    error: function () {
+      alert("소상공인 회원 등록자가 아닙니다.");
+    },
+  });
 });
