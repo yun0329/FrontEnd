@@ -30,6 +30,10 @@ function readURL(input) {
       type: 'PUT', 
       url: 'http://127.0.0.1:8080/menu/'+ menuId,
       contentType: 'application/json',
+      headers: {
+        "Authorization": "Access-Token",
+        "Refresh": "Refresh-Token"
+      },
       data: JSON.stringify({
         'menu_name': menu_name,
         'price': price,

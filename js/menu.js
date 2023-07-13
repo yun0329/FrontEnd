@@ -83,6 +83,7 @@ function getMenus() {
 
   //메뉴정보를 불러온다.
   function get_detail_Menus(menuId) {
+    var menuId = 1;
 
     $.ajax({
       url: 'http://127.0.0.1:8080/menu'+ menuId,
