@@ -138,11 +138,6 @@
   justify-content: space-around;
   align-items: center;
 }
-#day-select1 {
-  border-radius: 10px;
-  width: 130px;
-  height: 40px;
-}
 
 #open-time-select1 {
   border-radius: 10px;
@@ -154,28 +149,6 @@
   border-radius: 10px;
   width: 130px;
   height: 40px;
-}
-
-#select_button3 {
-  background-color: #639ef6;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  width: 100px;
-  cursor: pointer;
-  width: 50px;
-  height: 30px;
-}
-
-#select_button4 {
-  background-color: #639ef6;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  width: 100px;
-  cursor: pointer;
-  width: 50px;
-  height: 30px;
 }
 
 select option[value=""][disabled] {
