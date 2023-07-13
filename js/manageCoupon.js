@@ -5,7 +5,7 @@ var refreshToken = localStorage.getItem("refreshToken");
 $(document).ready(function () {
   $.ajax({
     type: "GET",
-    url: `${서버주소}/api/coupon`,
+    url: `http://127.0.0.1:8080/api/coupon`,
     contentType: "application/json",
     success: function (data) {
       var responseList = data.responseList;
@@ -44,7 +44,7 @@ $(document).ready(function () {
 function deleteCoupon() {
   $.ajax({
     type: "DELETE",
-    url: `${서버주소}/api/{couponId}`,
+    url: `http://127.0.0.1:8080/api/{couponId}`,
     contentType: "application/json",
     headers: {
       Authorization: "AccessToken",
