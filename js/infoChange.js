@@ -95,7 +95,7 @@ function addInputColumn() {
 
 $(document).ready(function () {
   $("#removeButton").click(function () {
-    $("div").remove(".inputWrapper");
+    $("div").remove(".inputWrapper:last-child");
   });
 });
 
