@@ -61,7 +61,11 @@
     <div class="writeReview_container">
       <p class="writeReview_container2">별점</p>
       <input type="text" style="width: 71px; border: #000000 solid 1px" />
-      <p class="writeReview_container3">☆☆☆☆☆</p>
+      <span class="star">
+        ★★★★★
+        <span>★★★★★</span>
+        <input type="range" oninput="drawStar(this)" value="1" step="1" min="0" max="10">
+      </span>
     </div>
     <hr />
     <div class="writeReview_container">
@@ -76,5 +80,5 @@
       <input type="button" value="완료" id="complete_button" />
     </div>
   </body>
-  <script src="js/coupon.js"></script>
+  <script src="js/writeReview.js"></script>
 </html>
