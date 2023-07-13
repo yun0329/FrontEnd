@@ -19,6 +19,62 @@ function readURL(input) {
   }
 }
 
+  //메뉴정보 수정한다.
+  function completeNewPost() {
+    var menuId = 1;
+    var menu_name = $('#menu').val();
+    var price = $('#price').val();
+    var menu_img = $('#menu_img_link').val();
+
+    $.ajax({
+      type: 'PUT', 
+      url: 'http://127.0.0.1:8080/menu/'+ menuId,
+      contentType: 'application/json',
+      data: JSON.stringify({
+        'menu_name': menu_name,
+        'price': price,
+        'menu_img': menu_img
+      }),
+      success: function(data) {
+        alert('메뉴수정 완료');
+        location.href = "/menu.html"; 
+      },
+      error: function() {
+        alert('메뉴수정 실패');
+      }
+    });
+  }
+  function completePost_cbv(){
+    $("#form_submit").trigger("click")
+}
+
+  //메뉴 정보를 삭제한다.
+  function deleteMenu() {
+    var menuId = localStorage.getItem('menuId');
+  
+    $.ajax({
+      type: 'DELETE',
+      url: 'http://127.0.0.1:8000/post/delete/' + menuId,
+      headers: {
+        'Authorization': 'AccessToken',
+        'Refresh-Token': 'RefreshToken',
+      },
+      success: function(data) {
+        alert('삭제 성공');
+        $("#" + menuId).remove();
+        location.href = '/post/list/cbv/';
+      },
+      error: function(xhr) {
+        if (xhr.status === 401) {
+          var errorMessage = JSON.parse(xhr.responseText).message;
+          alert('삭제 실패: ' + errorMessage);
+        } else {
+          alert('삭제 실패');
+        }
+      }
+    });
+  }
+
 // // img 클릭됬을 때 함수
 // function handleImgClick2(data) {
 //   var num = data.id.substring(data.id.length - 1);
