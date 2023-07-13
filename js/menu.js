@@ -1,5 +1,5 @@
 //해당 가게의 메뉴정보를 불러온다.
-function getMenus(storeId) {
+function getMenus() {
   
   var storeId = localStorage.getItem('storeId');
     $.ajax({
@@ -83,6 +83,7 @@ function getMenus(storeId) {
 
   //메뉴정보를 불러온다.
   function get_detail_Menus(menuId) {
+
     $.ajax({
       url: 'http://127.0.0.1:8080/menu'+ menuId,
       type: 'GET',
@@ -90,71 +91,15 @@ function getMenus(storeId) {
   
         console.log('메뉴 정보 불러옴!');
         location.reload()
-        location.href = "http://127.0.0.1:8080/menu/detail"+menuId; 
+        location.href = "http://127.0.0.1:8080/menu/detail" + menuId; 
       },
       error: function() {
         console.log('에러 발생');
       }
     });
   }
-  
-  $(document).ready(function() {
-    getMenus();
-  });
 
-  //메뉴정보 수정한다.
-  function completeNewPost() {
-    var formData = new FormData();
-    formData.append('menu', $('#menu').val());
-    formData.append('price', $('#price').val());
-    formData.append('menu_img', $('#menu_ing_link').val());
 
-    $.ajax({
-      type: 'PUT', 
-      url: '받을 url',
-      contentType: 'application/json',
-      data: JSON.stringify({
-        'menu_name': menu_name,
-        'price': price,
-        'menu_img': menu_img
-      }),
-      success: function(data) {
-        alert('메뉴수정 완료');
-        location.href = "/menu.html"; 
-      },
-      error: function() {
-        alert('메뉴수정 실패');
-      }
-    });
-  }
-  function completePost_cbv(){
-    $("#form_submit").trigger("click")
-}
 
-  //메뉴 정보를 삭제한다.
-  function deleteMenu() {
-    var menuId = localStorage.getItem('menuId');
-  
-    $.ajax({
-      type: 'DELETE',
-      url: `http://127.0.0.1:8000/post/delete/${menuId}/`,
-      headers: {
-        'Authorization': 'AccessToken',
-        'Refresh-Token': 'RefreshToken',
-      },
-      success: function(data) {
-        alert('삭제 성공');
-        $("#" + menuId).remove();
-        location.href = '/post/list/cbv/';
-      },
-      error: function(xhr) {
-        if (xhr.status === 401) {
-          var errorMessage = JSON.parse(xhr.responseText).message;
-          alert('삭제 실패: ' + errorMessage);
-        } else {
-          alert('삭제 실패');
-        }
-      }
-    });
-  }
+
   
