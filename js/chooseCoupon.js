@@ -52,7 +52,6 @@ couponInput.addEventListener("click", (event) => {
     },
     success: function (response) {
       console.log(response);
-      // Handle the successful response here
     },
     error: function () {
       alert("쿠폰 선택에 실패했습니다.");

@@ -41,4 +41,70 @@ $(document).ready(function () {
   });
 });
 
-function.deleteCoupon()
+function deleteCoupon() {
+  $.ajax({
+    type: "DELETE",
+    url: `${서버주소}/api/{couponId}`,
+    contentType: "application/json",
+    headers: {
+      Authorization: "AccessToken",
+      "Refresh-Token": "RefreshToken",
+    },
+    success: function (data) {
+      var responseList = data.responseList;
+      console.log(responseList);
+      var length = responseList.length;
+      var couponWrap = responseList[i];
+      const couponBox = document.querySelector(".wrap_manageCoupon_container3");
+
+      for (var i = 0; i < length; i++) {
+        var coupon = document.createElement("div");
+        coupon.className = "manageCoupon_container3";
+
+        var couponInput = document.createElement("button");
+        couponInput.id = "couponPanel_button1";
+        couponInput.onclick = function (event) {
+          toggleCouponPanel("couponPanel1");
+        };
+        couponInput.innerHTML = "⦁⦁⦁";
+
+        var couponContent = document.createElement("div");
+        couponContent.id = "couponPanel1";
+        couponContent.className = "coupon_panel";
+
+        var couponPanelContent = document.createElement("div");
+        couponPanelContent.className = "couponPanel_content";
+
+        var ul = document.createElement("ul");
+
+        var li1 = document.createElement("li");
+        var li2 = document.createElement("li");
+
+        var a = document.createElement("a");
+        var b = document.createElement("a");
+        a.innerHTML = "수정";
+        a.onclick = function (event) {
+          editCoupon();
+        };
+        b.innerHTML = "삭제";
+        b.onclick = function (event) {
+          deleteCoupon();
+        };
+
+        li1.appendChild(a);
+        li2.appendChild(b);
+
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        couponPanelContent.appendChild(ul);
+        couponContent.appendChild(couponPanelContent);
+        coupon.appendChild(couponInput);
+        coupon.appendChild(couponContent);
+        couponBox.appendChild(coupon);
+      }
+    },
+    error: function () {
+      alert("쿠폰 삭제에 실패했습니다.");
+    },
+  });
+}
