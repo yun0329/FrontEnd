@@ -137,48 +137,8 @@
 
 .select {
   display: flex;
-  padding: 0px 50px;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-}
-#day-select {
-  border-radius: 10px;
-  width: 130px;
-  height: 40px;
-}
-
-#open-time-select {
-  border-radius: 10px;
-  width: 130px;
-  height: 40px;
-}
-
-#closing-time-select {
-  border-radius: 10px;
-  width: 130px;
-  height: 40px;
-}
-
-#select_button1 {
-  background-color: #639ef6;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  width: 100px;
-  cursor: pointer;
-  width: 50px;
-  height: 30px;
-}
-
-#select_button2 {
-  background-color: #639ef6;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  width: 100px;
-  cursor: pointer;
-  width: 50px;
-  height: 30px;
 }
 
 select option[value=""][disabled] {
